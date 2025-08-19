@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\models\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\models\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -142,7 +142,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 560,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -158,8 +158,7 @@
               "RelativeToolTip": "MobileApp\\Services\\UserProxyService.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAIwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T20:46:38.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T20:46:38.983Z"
             },
             {
               "$type": "Document",
@@ -171,8 +170,7 @@
               "RelativeToolTip": "MobileApp\\MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:27:46.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T23:27:46.786Z"
             },
             {
               "$type": "Document",
@@ -184,8 +182,7 @@
               "RelativeToolTip": "MobileApp\\Components\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T22:39:49.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T22:39:49.649Z"
             },
             {
               "$type": "Document",
@@ -197,8 +194,7 @@
               "RelativeToolTip": "MobileApp\\Data\\SQLiteDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T16:42:45.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T16:42:45.917Z"
             },
             {
               "$type": "Document",
@@ -210,8 +206,7 @@
               "RelativeToolTip": "Infrastructure\\Api\\ClientApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:14:39.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T23:14:39.222Z"
             },
             {
               "$type": "Document",
@@ -223,8 +218,7 @@
               "RelativeToolTip": "MobileApp\\Services\\ClientLocalService.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA1wDAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T20:46:00.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T20:46:00.782Z"
             },
             {
               "$type": "Document",
@@ -236,8 +230,7 @@
               "RelativeToolTip": "MobileApp\\Services\\SyncService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T16:44:16.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T16:44:16.514Z"
             },
             {
               "$type": "Document",
@@ -249,8 +242,7 @@
               "RelativeToolTip": "MobileApp\\Services\\ConnectivityService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:27:23.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T13:27:23.039Z"
             },
             {
               "$type": "Document",
@@ -262,25 +254,24 @@
               "RelativeToolTip": "Core\\Interfaces\\IClientService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:41:20.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T14:41:20.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Models\\Entities\\Client.cs",
               "RelativeDocumentMoniker": "MobileApp\\Models\\Entities\\Client.cs",
               "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Models\\Entities\\Client.cs",
               "RelativeToolTip": "MobileApp\\Models\\Entities\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T20:54:36.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Factura.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Models\\Entities\\Factura.cs",
               "RelativeDocumentMoniker": "MobileApp\\Models\\Entities\\Factura.cs",
@@ -288,12 +279,11 @@
               "RelativeToolTip": "MobileApp\\Models\\Entities\\Factura.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAiwDAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T20:54:55.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T20:54:55.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Models\\Entities\\User.cs",
               "RelativeDocumentMoniker": "MobileApp\\Models\\Entities\\User.cs",
@@ -314,8 +304,7 @@
               "RelativeToolTip": "MobileApp\\Components\\Pages\\Login.razor",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAFUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T20:04:52.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:04:52.682Z"
             },
             {
               "$type": "Document",
@@ -327,8 +316,7 @@
               "RelativeToolTip": "MobileApp\\Services\\UserLocalService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T22:14:55.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T22:14:55.623Z"
             },
             {
               "$type": "Document",
@@ -340,8 +328,7 @@
               "RelativeToolTip": "Infrastructure\\Api\\UserApiService.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:14:50.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T23:14:50.811Z"
             },
             {
               "$type": "Document",
@@ -353,8 +340,7 @@
               "RelativeToolTip": "MobileApp\\Services\\ClientProxyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T20:47:43.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T20:47:43.866Z"
             },
             {
               "$type": "Document",
@@ -366,8 +352,7 @@
               "RelativeToolTip": "Core\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:16:17.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T23:16:17.293Z"
             },
             {
               "$type": "Document",
@@ -379,8 +364,7 @@
               "RelativeToolTip": "Core\\DTOs\\UserDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T21:42:37.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T21:42:37.799Z"
             },
             {
               "$type": "Document",
@@ -392,8 +376,7 @@
               "RelativeToolTip": "Core\\DTOs\\ClientDTOs.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T23:55:11.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T23:55:11.583Z"
             },
             {
               "$type": "Document",
@@ -405,8 +388,7 @@
               "RelativeToolTip": "MobileApp\\Services\\AuthState.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAA5wA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T20:47:35.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:47:35.649Z"
             },
             {
               "$type": "Document",
@@ -418,8 +400,7 @@
               "RelativeToolTip": "MobileApp\\wwwroot\\index.html",
               "ViewState": "AgIAAAkAAAAAAAAAAAAcwB8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-14T12:49:28.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T12:49:28.332Z"
             },
             {
               "$type": "Document",
@@ -431,8 +412,7 @@
               "RelativeToolTip": "MobileApp\\wwwroot\\css\\app.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-13T20:05:30.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:05:30.707Z"
             },
             {
               "$type": "Document",
@@ -444,8 +424,7 @@
               "RelativeToolTip": "MobileApp\\wwwroot\\css\\login.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-14T12:47:39.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T12:47:39.94Z"
             },
             {
               "$type": "Document",
@@ -457,8 +436,7 @@
               "RelativeToolTip": "MobileApp\\Components\\BottomNav.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-14T13:56:03.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T13:56:03.737Z"
             },
             {
               "$type": "Document",
@@ -470,8 +448,7 @@
               "RelativeToolTip": "MobileApp\\wwwroot\\css\\dashboard.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-14T15:04:34.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T15:04:34.158Z"
             },
             {
               "$type": "Document",
@@ -483,8 +460,7 @@
               "RelativeToolTip": "MobileApp\\Components\\Layout\\NavMenu.razor",
               "ViewState": "AgIAACcAAAAAAAAAAIBZwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T20:09:34.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:09:34.079Z"
             },
             {
               "$type": "Document",
@@ -508,8 +484,7 @@
               "RelativeToolTip": "MobileApp\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T20:09:25.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:09:25.827Z"
             },
             {
               "$type": "Document",
@@ -521,8 +496,7 @@
               "RelativeToolTip": "MobileApp\\Components\\RedirectToLogin.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T20:48:49.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:48:49.77Z"
             },
             {
               "$type": "Document",
@@ -534,8 +508,7 @@
               "RelativeToolTip": "MobileApp\\MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-13T20:08:59.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:08:59.626Z"
             },
             {
               "$type": "Document",
@@ -547,8 +520,7 @@
               "RelativeToolTip": "MobileApp\\Components\\Routes.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwBIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T20:09:10.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:09:10.294Z"
             },
             {
               "$type": "Document",
@@ -560,8 +532,7 @@
               "RelativeToolTip": "MobileApp\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-13T20:09:06.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:09:06.524Z"
             },
             {
               "$type": "Document",
@@ -573,8 +544,7 @@
               "RelativeToolTip": "Core\\Interfaces\\IConnectivityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T20:39:52.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T20:39:52.359Z"
             }
           ]
         },

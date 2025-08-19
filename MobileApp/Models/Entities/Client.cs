@@ -14,5 +14,7 @@ namespace MobileApp.Models.Entities
         public decimal SaldoVencCc { get; set; }
         public decimal LimiteCredito { get; set; }
         public decimal LimiteCreditoUso { get; set; }
+
+        // PRUEBA DE UNA RAMA A OTRA
     }
 }
