@@ -1,0 +1,39 @@
+﻿@using MobileApp.Components.Layout
+@namespace MobileApp.Components
+@inject MobileApp.Services.IAuthState AuthState
+@inject NavigationManager Navigation
+
+<Router AppAssembly="@typeof(MauiProgram).Assembly">
+    <Found Context="routeData">
+        @if (routeData.PageType.Name == "Login")
+        {
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        }
+        else if (AuthState.IsLoggedIn)
+        {
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        }
+        else
+        {
+            <LayoutView Layout="@typeof(MainLayout)">
+                <Login />
+            </LayoutView>
+        }
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        @if (AuthState.IsLoggedIn)
+        {
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Página no encontrada.</p>
+            </LayoutView>
+        }
+        else
+        {
+            <LayoutView Layout="@typeof(MainLayout)">
+                <Login />
+            </LayoutView>
+        }
+    </NotFound>
+</Router>
+

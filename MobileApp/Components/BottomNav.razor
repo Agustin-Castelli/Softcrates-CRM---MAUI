@@ -1,0 +1,46 @@
+﻿<nav class="bottom-nav">
+    <a href="/pedidos" class="nav-item">
+        <span class="oi oi-list"></span>
+        <span>Pedidos</span>
+    </a>
+    <a href="/" class="nav-item">
+        <span class="oi oi-person"></span>
+        <span>Cliente</span>
+    </a>
+    <a href="/rutas" class="nav-item">
+        <span class="oi oi-map"></span>
+        <span>Rutas</span>
+    </a>
+    <a href="/reportes" class="nav-item">
+        <span class="oi oi-graph"></span>
+        <span>Reportes</span>
+    </a>
+</nav>
+
+<style>
+    .bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: #333;
+    }
+
+        .nav-item span:first-child {
+            font-size: 1.2rem;
+        }
+</style>
+

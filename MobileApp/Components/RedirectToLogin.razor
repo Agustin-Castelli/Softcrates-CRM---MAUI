@@ -1,0 +1,33 @@
+﻿@inject MobileApp.Services.IAuthState AuthState
+@inject NavigationManager Navigation
+@implements IDisposable
+
+@if (AuthState.IsLoggedIn)
+{
+    @ChildContent
+}
+else
+{
+    <div class="text-center">
+        <p>Redirigiendo al login...</p>
+    </div>
+}
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    protected override void OnInitialized()
+    {
+        AuthState.OnAuthenticationStateChanged += StateHasChanged;
+        
+        if (!AuthState.IsLoggedIn)
+        {
+            Navigation.NavigateTo("/login", true);
+        }
+    }
+
+    public void Dispose()
+    {
+        AuthState.OnAuthenticationStateChanged -= StateHasChanged;
+    }
+}

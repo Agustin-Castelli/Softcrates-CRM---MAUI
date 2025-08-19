@@ -1,0 +1,1 @@
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\MobileApp.csproj;x64

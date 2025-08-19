@@ -1,0 +1,108 @@
+﻿@page "/login"
+@layout MobileApp.Components.Layout.MainLayout
+@using Core.DTOs
+@using Core.Interfaces
+@inject IUserService UserService
+@inject MobileApp.Services.IAuthState AuthState
+@inject NavigationManager Navigation
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <img src="images/LogoCL.png" alt="Logo Empresa" class="logo-empresa"/>
+        <h1 class="login-title">SOFTCRATES CRM</h1>
+        <img src="images/LogoSoftcrates.png" alt="Logo Sistema" class="logo-sistema"/>
+
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" @bind="credentials.Username" placeholder="Ingrese su nombre de usuario" />
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <div class="password-container">
+                <input type="@passwordFieldType" @bind="credentials.Password" placeholder="Ingrese su contraseña" />
+                <button type="button" class="btn-eye" @onclick="TogglePasswordVisibility">👁</button>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="error-message">@errorMessage</div>
+        }
+
+        <button class="btn-login" @onclick="LoginAsync" disabled="@isLoading">
+            @if (isLoading)
+            {
+                <span>Ingresando...</span>
+            }
+            else
+            {
+                <span>Ingresar</span>
+            }
+        </button>
+
+        <div class="login-extra">
+            <a href="#">¿Olvidó su contraseña?</a>
+        </div>
+
+        <div class="divider">
+            <span>o</span>
+        </div>
+
+        <div class="social-login">
+            <button class="btn-social google">Google</button>
+            <button class="btn-social facebook">Facebook</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private UserLoginDto credentials = new();
+    private string passwordFieldType = "password";
+    private string? errorMessage;
+    private bool isLoading = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (AuthState.IsLoggedIn)
+        {
+            Navigation.NavigateTo("/", true);
+        }
+    }
+
+    private async Task LoginAsync()
+    {
+        if (isLoading) return;
+
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            var result = await UserService.LoginAsync(credentials);
+            if (result != null)
+            {
+                AuthState.SetLoggedIn(true, result);
+                Navigation.NavigateTo("/", true);
+            }
+            else
+            {
+                errorMessage = "Usuario o contraseña incorrectos.";
+            }
+        }
+        catch
+        {
+            errorMessage = "Error de conexión. Intente nuevamente.";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void TogglePasswordVisibility()
+    {
+        passwordFieldType = passwordFieldType == "password" ? "text" : "password";
+    }
+}
+

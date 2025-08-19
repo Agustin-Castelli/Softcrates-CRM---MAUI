@@ -1,0 +1,15 @@
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\bin\Debug\net8.0\UI.deps.json
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\bin\Debug\net8.0\UI.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\bin\Debug\net8.0\UI.pdb
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\bin\Debug\net8.0\Core.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\bin\Debug\net8.0\Core.pdb
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.csproj.AssemblyReference.cache
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.AssemblyInfoInputs.cache
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.AssemblyInfo.cs
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.csproj.Up2Date
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\refint\UI.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\UI.pdb
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\obj\Debug\net8.0\ref\UI.dll

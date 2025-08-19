@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobileApp</name>
+    </assembly>
+    <members>
+        <member name="T:MobileApp.Services.UserLocalService">
+            <summary>
+            Login offline contra la tabla local `sisusuar` (SQLite).
+            - Matchea por codusr (case-insensitive, trim).
+            - Valida password (trim para columnas CHAR antiguas).
+            - Rechaza usuarios inactivos.
+            Devuelve UserDataResponse con Token vacío (igual que la API).
+            </summary>
+        </member>
+    </members>
+</doc>

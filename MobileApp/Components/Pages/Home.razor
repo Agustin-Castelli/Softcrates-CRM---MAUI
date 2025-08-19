@@ -1,0 +1,206 @@
+﻿@page "/"
+@using Core.DTOs
+@using Core.Interfaces
+@inject IClientService ClientService
+
+<div class="home-wrap">
+    <!-- CABECERA + BUSCADOR -->
+    <div class="header">
+        <div class="cliente-actual">
+            @if (selectedClient is null)
+            {
+                <span>Seleccione un cliente…</span>
+            }
+            else
+            {
+                <span><strong>@selectedClient.NomCli</strong> (Cod: @selectedClient.CodCli)</span>
+            }
+        </div>
+
+        <div class="search-box">
+            <input type="text"
+                   placeholder="Buscar cliente..."
+                   value="@searchText"
+                   @oninput="OnSearchChanged" />
+
+            @if (isSearching)
+            {
+                <div class="search-hint">Buscando…</div>
+            }
+
+            @if (showSuggestions && suggestions?.Count > 0)
+            {
+                <ul class="suggestions">
+                    @foreach (var c in suggestions)
+                    {
+                        <li @onclick="(() => SelectClient(c))">@c.NomCli (@c.CodCli)</li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+
+    <!-- TARJETA CUENTA CORRIENTE -->
+    @if (loadingResumen)
+    {
+        <div class="card">Cargando resumen…</div>
+    }
+    else if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="card error">@errorMessage</div>
+    }
+    else if (resumen is not null)
+    {
+        <div class="card">
+            <div class="card-title">Saldo actual de cuenta corriente</div>
+            <div class="saldo">$ @resumen.SaldoActual.ToString("N2")</div>
+
+            <div class="cc-row">
+                <div class="cc-item">
+                    <div class="cc-label">Límite de crédito</div>
+                    <div class="cc-value">$ @resumen.LimiteCredito.ToString("N2")</div>
+                </div>
+                <div class="cc-item">
+                    <div class="cc-label">Saldo vencido</div>
+                    <div class="cc-value vencido">$ @resumen.SaldoVencido.ToString("N2")</div>
+                </div>
+            </div>
+
+            <div class="progress-wrap">
+                <div class="progress">
+                    <div class="bar" style="width:@Math.Clamp((double)resumen.PorcentajeCreditoUsado, 0, 100)%"></div>
+                </div>
+                <div class="progress-text">
+                    @resumen.PorcentajeCreditoUsado.ToString("N0")% utilizado del límite de crédito
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN NUEVO PEDIDO (placeholder) -->
+        <button class="btn-primary full">+ Nuevo Pedido</button>
+
+        <!-- FACTURAS RECIENTES -->
+        <div class="section-title">
+            <span>Facturas recientes</span>
+            @if (resumen.Facturas?.Count > 0)
+            {
+                <a href="javascript:void(0)">Ver todas</a>
+            }
+        </div>
+
+        @if (resumen.Facturas?.Count > 0)
+        {
+            <div class="list">
+                @foreach (var f in resumen.Facturas.OrderByDescending(x => x.Fecha).Take(10))
+                {
+                    <div class="list-item">
+                        <div class="li-left">
+                            <div class="li-title">Factura #@f.NumeroFactura</div>
+                            <div class="li-sub">@f.Fecha.ToString("yyyy-MM-dd")</div>
+                        </div>
+                        <div class="li-right">
+                            <div class="li-amount">$ @f.Importe.ToString("N2")</div>
+                            <span class="badge @GetEstadoClass(f.Estado)">@f.Estado</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="card">Sin facturas para mostrar.</div>
+        }
+    }
+</div>
+
+@code {
+    // UI state
+    private string searchText = string.Empty;
+    private List<ClientData> suggestions = new();
+    private bool showSuggestions = false;
+    private bool isSearching = false;
+
+    // Selección y resumen
+    private ClientData? selectedClient;
+    private ClientResumenDto? resumen;
+    private bool loadingResumen = false;
+    private string? errorMessage;
+
+    // Debounce
+    private CancellationTokenSource? _searchCts;
+
+    private async Task OnSearchChanged(ChangeEventArgs e)
+    {
+        searchText = e.Value?.ToString() ?? string.Empty;
+        _searchCts?.Cancel();
+        showSuggestions = true;
+
+        if (string.IsNullOrWhiteSpace(searchText) || searchText.Length < 2)
+        {
+            suggestions.Clear();
+            isSearching = false;
+            StateHasChanged();
+            return;
+        }
+
+        var cts = _searchCts = new CancellationTokenSource();
+        isSearching = true;
+        try
+        {
+            await Task.Delay(300, cts.Token); // debounce 300ms
+            if (cts.IsCancellationRequested) return;
+
+            var result = await ClientService.SearchClientsAsync(searchText);
+            suggestions = result?.ToList() ?? new List<ClientData>();
+        }
+        catch (TaskCanceledException) { }
+        catch (Exception ex)
+        {
+            // Podés loguear si querés
+        }
+        finally
+        {
+            isSearching = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task SelectClient(ClientData c)
+    {
+        selectedClient = c;
+        showSuggestions = false;
+        searchText = c.NomCli;
+
+        await LoadResumenAsync(c.CodCli);
+    }
+
+    private async Task LoadResumenAsync(int codCli)
+    {
+        loadingResumen = true;
+        resumen = null;
+        errorMessage = null;
+
+        try
+        {
+            resumen = await ClientService.GetResumenCliente(codCli);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "No se pudo cargar el resumen del cliente.";
+        }
+        finally
+        {
+            loadingResumen = false;
+            StateHasChanged();
+        }
+    }
+
+    private string GetEstadoClass(string estado)
+        => estado?.ToLowerInvariant() switch
+        {
+            "pagada" => "success",
+            "pendiente" => "warning",
+            "vencida" => "danger",
+            _ => "neutral"
+        };
+}
