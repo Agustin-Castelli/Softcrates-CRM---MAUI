@@ -4,6 +4,21 @@
         <name>MobileApp</name>
     </assembly>
     <members>
+        <member name="M:MobileApp.Data.DatabaseInitializer.EnsureDatabase(System.String,System.Boolean)">
+            <summary>
+            Copia el .db desde Resources/Raw a AppDataDirectory si no existe.
+            </summary>
+        </member>
+        <member name="M:MobileApp.Services.ArticuloSyncService.SyncAsync(System.Threading.CancellationToken)">
+            <summary>
+            Sincroniza artículos desde la API hacia las tablas Artic y PreVen de SQLite.
+            </summary>
+        </member>
+        <member name="M:MobileApp.Services.PedidoSyncService.SyncAsync(System.Threading.CancellationToken)">
+            <summary>
+            Sincroniza PedWebCab y PedWebArt desde la API hacia SQLite.
+            </summary>
+        </member>
         <member name="T:MobileApp.Services.UserLocalService">
             <summary>
             Login offline contra la tabla local `sisusuar` (SQLite).

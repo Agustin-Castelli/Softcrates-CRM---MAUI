@@ -1,6 +1,7 @@
 GoogleGson.dll
 Jsr305Binding.dll
 Microsoft.AspNetCore.Components.WebView.Maui.dll
+Microsoft.Identity.Client.dll
 Microsoft.Maui.Controls.Compatibility.dll
 Microsoft.Maui.Controls.dll
 Microsoft.Maui.Controls.Xaml.dll
@@ -154,6 +155,7 @@ gifdecoder.aar
 glide.aar
 GoogleGson.aar
 Jsr305Binding.aar
+Microsoft.Identity.Client.aar
 Microsoft.Maui.Controls.Compatibility.aar
 Microsoft.Maui.Controls.aar
 maui.aar

@@ -1,7 +1,12 @@
 ﻿@page "/"
 @using Core.DTOs
 @using Core.Interfaces
+@using MobileApp.Services
 @inject IClientService ClientService
+@inject NavigationManager Navigation
+@inject ClientStateService ClientState
+@inject SyncManager SyncManager
+@inject CrearPedidoSyncService CrearPedidoSyncService
 
 <div class="home-wrap">
     <!-- CABECERA + BUSCADOR -->
@@ -77,7 +82,7 @@
         </div>
 
         <!-- BOTÓN NUEVO PEDIDO (placeholder) -->
-        <button class="btn-primary full">+ Nuevo Pedido</button>
+        <button class="btn-primary full" @onclick="() => NuevoPedido(selectedClient.CodCli)">+ Nuevo Pedido</button>
 
         <!-- FACTURAS RECIENTES -->
         <div class="section-title">
@@ -171,6 +176,8 @@
         showSuggestions = false;
         searchText = c.NomCli;
 
+        ClientState.SelectedClient = c;
+
         await LoadResumenAsync(c.CodCli);
     }
 
@@ -186,13 +193,18 @@
         }
         catch (Exception ex)
         {
-            errorMessage = "No se pudo cargar el resumen del cliente.";
+            errorMessage = $"No se pudo cargar el resumen del cliente.\n Error: {ex}";
         }
         finally
         {
             loadingResumen = false;
             StateHasChanged();
         }
+    }
+
+    private void NuevoPedido(int codCli)
+    {
+        Navigation.NavigateTo($"/articulos/{codCli}", true);
     }
 
     private string GetEstadoClass(string estado)
@@ -203,4 +215,34 @@
             "vencida" => "danger",
             _ => "neutral"
         };
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // 🚀 Acá llamás a la sincronización de artículos y pedidos
+            await SyncManager.RunAllAsync();
+            System.Diagnostics.Debug.WriteLine("✅ Sincronización completa");
+
+            // 🚀 Ahora mandamos pedidos pendientes
+            // 🚀 correr la sync de pedidos en segundo plano
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    await CrearPedidoSyncService.SyncPedidosPendientesAsync();
+                    System.Diagnostics.Debug.WriteLine("✅ Sincronización de pedidos pendientes completa");
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error sincronizando pedidos pendientes: {ex.Message}");
+                }
+            });
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Error en la sincronización: {ex.Message}");
+            // si querés, podrías mostrar un cartelito amigable en la UI
+        }
+    }
 }

@@ -6,29 +6,37 @@
 @inject MobileApp.Services.IAuthState AuthState
 @inject NavigationManager Navigation
 
+<div class="login-scroll">
 <div class="login-wrapper">
     <div class="login-card">
-        <img src="images/LogoCL.png" alt="Logo Empresa" class="logo-empresa"/>
+        @* <img src="images/LogoCL.png" alt="Logo Empresa" class="logo-empresa"/> *@
         <h1 class="login-title">SOFTCRATES CRM</h1>
         <img src="images/LogoSoftcrates.png" alt="Logo Sistema" class="logo-sistema"/>
-
-        <div class="form-group">
-            <label>Usuario</label>
-            <input type="text" @bind="credentials.Username" placeholder="Ingrese su nombre de usuario" />
-        </div>
-
-        <div class="form-group">
-            <label>Contraseña</label>
-            <div class="password-container">
-                <input type="@passwordFieldType" @bind="credentials.Password" placeholder="Ingrese su contraseña" />
-                <button type="button" class="btn-eye" @onclick="TogglePasswordVisibility">👁</button>
-            </div>
-        </div>
 
         @if (!string.IsNullOrEmpty(errorMessage))
         {
             <div class="error-message">@errorMessage</div>
         }
+
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text"
+                   @bind="credentials.Username"
+                   placeholder="Ingrese su nombre de usuario"
+                   @onkeydown="HandleKeyPress" />
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <div class="password-container">
+                <input type="@passwordFieldType"
+                       @bind="credentials.Password"
+                       placeholder="Ingrese su contraseña"
+                       @onkeydown="HandleKeyPress" />
+                <button type="button" class="btn-eye" @onclick="TogglePasswordVisibility">👁</button>
+            </div>
+        </div>
+
 
         <button class="btn-login" @onclick="LoginAsync" disabled="@isLoading">
             @if (isLoading)
@@ -40,21 +48,10 @@
                 <span>Ingresar</span>
             }
         </button>
-
-        <div class="login-extra">
-            <a href="#">¿Olvidó su contraseña?</a>
-        </div>
-
-        <div class="divider">
-            <span>o</span>
-        </div>
-
-        <div class="social-login">
-            <button class="btn-social google">Google</button>
-            <button class="btn-social facebook">Facebook</button>
-        </div>
     </div>
 </div>
+</div>
+
 
 @code {
     private UserLoginDto credentials = new();
@@ -104,5 +101,12 @@
     {
         passwordFieldType = passwordFieldType == "password" ? "text" : "password";
     }
-}
 
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await LoginAsync();
+        }
+    }
+}

@@ -1,0 +1,258 @@
+﻿@page "/articulos/{CodCli:int}"
+@using Core.DTOs
+@using Core.Interfaces
+@using MobileApp.Services
+@inject IArticuloService ArticuloService
+@inject CartStateService CartState
+@inject NavigationManager NavManager
+
+
+<PageTitle>Artículos</PageTitle>
+
+<div class="articulos-container">
+    <!-- HEADER FIJO -->
+    <div class="articulos-header">
+        <!-- MONTO TOTAL -->
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div class="card-title">MONTO TOTAL</div>
+                    <div class="saldo">$@MontoTotal.ToString("N0")</div>
+                </div>
+                <div style="text-align:right;">
+                    <div class="cliente-actual">@clienteNombre</div>
+                    <div class="li-sub">@ClienteDireccion</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUSCADOR -->
+        <div class="search-box">
+            <input type="text"
+                   @bind-value="FiltroBusqueda"
+                   @bind-value:event="oninput"
+                   placeholder="Buscar productos por nombre o código..." />
+        </div>
+    </div>
+
+    <!-- BOTON FIJO "IR AL RESUMEN"-->
+    <div class="articulos-footer">
+        <button class="btn-primary full" @onclick="IrAlResumen">
+            Ver resumen del pedido
+        </button>
+    </div>
+
+
+    <!-- BOTONES DE PAGINACIÓN -->
+    <div class="pagination-controls">
+        <button class="btn-secondary" @onclick="PaginaAnterior">
+            ⬅️ Anterior
+        </button>
+        <span>Página @currentPage</span>
+        <button class="btn-secondary" @onclick="PaginaSiguiente">
+            Siguiente ➡️
+        </button>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="loading-text">Cargando...</div>
+    }
+
+    <!-- LISTA SCROLLEABLE -->
+    <div class="articulos-lista">
+        @if (articulos is null)
+        {
+            <div class="card">Cargando artículos...</div>
+        }
+        else if (!articulos.Any())
+        {
+            <div class="card">No se encontraron artículos.</div>
+        }
+        else
+        {
+            <div class="list grid">
+                @foreach (var art in articulos)
+                {
+                    <div class="list-item">
+                        <!-- Imagen -->
+                        <div class="product-img">IMG</div>
+
+                        <!-- Info -->
+                        <div class="li-left">
+                            <div class="li-title">@art.DesArt</div>
+                            <div class="li-amount">$@art.Precio</div>
+                        </div>
+
+                        <!-- Cantidad -->
+                        <div class="li-right">
+                            <button class="qty-btn danger" @onclick="() => Decrementar(art)">-</button>
+                            <input type="number"
+                                   inputmode="numeric"
+                                   pattern="[0-9]*"
+                                   class="qty-input"
+                                   value="@GetCantidad(art.CodArt)"
+                                   @onchange="@(e => ActualizarCantidad(art, e.Value?.ToString()))"
+                                   min="0"
+                                   max="9999" />
+                            <button class="qty-btn primary" @onclick="() => Incrementar(art)">+</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+
+@code {
+    [Parameter] public int CodCli { get; set; }
+    private string clienteNombre = "";
+    //private List<ArticuloDTO> todosArticulos = new();
+    private List<ArticuloDTO> articulos = new();
+    private Dictionary<string, int> Cantidades = new();
+    [Inject] private IClientService ClientService { get; set; } = default!;
+    private string _filtroBusqueda = string.Empty;
+    private int currentPage = 1;
+    private const int pageSize = 50;
+    private bool isLoading = false;
+    private bool hasMore = true;
+    private bool estaBuscando = false;
+
+    private string FiltroBusqueda
+    {
+        get => _filtroBusqueda;
+        set
+        {
+            _filtroBusqueda = value;
+            BuscarProductos();
+        }
+    }
+
+    private decimal MontoTotal => CartState.ObtenerMontoTotal();
+
+    private string ClienteDireccion = "Rioja 5434 - Rosario";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarArticulosAsync();
+
+        var cliente = await ClientService.GetClientePorIdAsync(CodCli);
+        clienteNombre = cliente.NomCli;
+    }
+
+    private async Task CargarArticulosAsync()
+    {
+        if (isLoading) return;
+        isLoading = true;
+
+        var nuevos = (await ArticuloService.ObtenerArticulos(currentPage, pageSize))?.ToList() ?? new();
+
+        if (nuevos.Count < pageSize)
+            hasMore = false;
+        else
+            hasMore = true;
+
+        articulos = nuevos;
+        estaBuscando = false;
+        isLoading = false;
+        StateHasChanged();
+    }
+
+    private async Task PaginaAnterior()
+    {
+        if (currentPage > 1 && !estaBuscando)
+        {
+            currentPage--;
+            await CargarArticulosAsync();
+        }
+    }
+
+    private async Task PaginaSiguiente()
+    {
+        if (hasMore && !estaBuscando)
+        {
+            currentPage++;
+            await CargarArticulosAsync();
+        }
+    }
+
+
+    private async Task BuscarProductos()
+    {
+        if (string.IsNullOrWhiteSpace(FiltroBusqueda))
+        {
+            // Si el filtro está vacío, volver a mostrar la paginación
+            currentPage = 1;
+            estaBuscando = false;
+            await CargarArticulosAsync();
+        }
+        else
+        {
+            // Buscar en TODOS los artículos de la BD
+            if (isLoading) return;
+            isLoading = true;
+
+            var resultados = (await ArticuloService.GetAll())?.Where(a =>
+                a.DesArt.Contains(FiltroBusqueda, StringComparison.OrdinalIgnoreCase)
+                || a.CodArt.Contains(FiltroBusqueda, StringComparison.OrdinalIgnoreCase))
+                .ToList() ?? new();
+
+            articulos = resultados;
+            estaBuscando = true;
+            hasMore = false; // No hay paginación en búsqueda
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private int GetCantidad(string codArt) => Cantidades.ContainsKey(codArt) ? Cantidades[codArt] : 0;
+
+    private void ActualizarCantidad(ArticuloDTO art, string? valorStr)
+    {
+        if (string.IsNullOrWhiteSpace(valorStr))
+        {
+            Cantidades[art.CodArt] = 0;
+            CartState.AddOrUpdateItem(art, 0);
+            return;
+        }
+
+        if (int.TryParse(valorStr, out int cantidad))
+        {
+            cantidad = Math.Max(0, Math.Min(cantidad, 9999));
+            Cantidades[art.CodArt] = cantidad;
+            CartState.AddOrUpdateItem(art, cantidad);
+        }
+        else
+        {
+            StateHasChanged();
+        }
+    }
+
+    private void Incrementar(ArticuloDTO art)
+    {
+        if (!Cantidades.ContainsKey(art.CodArt))
+            Cantidades[art.CodArt] = 0;
+
+        if (Cantidades[art.CodArt] < 9999)
+        {
+            Cantidades[art.CodArt]++;
+            CartState.AddOrUpdateItem(art, Cantidades[art.CodArt]);
+        }
+    }
+
+    private void Decrementar(ArticuloDTO art)
+    {
+        if (Cantidades.ContainsKey(art.CodArt) && Cantidades[art.CodArt] > 0)
+        {
+            Cantidades[art.CodArt]--;
+            CartState.AddOrUpdateItem(art, Cantidades[art.CodArt]);
+        }
+    }
+
+    private void IrAlResumen()
+    {
+        NavManager.NavigateTo("/crear-pedido");
+    }
+}
+

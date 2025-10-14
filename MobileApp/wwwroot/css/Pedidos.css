@@ -1,0 +1,147 @@
+﻿/* Contenedor principal */
+.pedidos-container {
+    padding: 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Títulos */
+.pedidos-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.pedido-subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Buscador */
+.pedido-search {
+    margin-bottom: 1rem;
+}
+
+.pedido-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0.5rem;
+}
+
+.pedido-btn {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .pedido-btn:hover {
+        background-color: #1d4ed8;
+    }
+
+/* Cards */
+.pedido-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    background: #fff;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+    .pedido-card:hover {
+        background-color: #e0e0e0; /* un gris clarito */
+        transform: scale(1.01);
+    }
+
+.pedido-card-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.pedido-card-sub {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.pedido-card-right {
+    text-align: right;
+}
+
+.pedido-card-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.pedido-status {
+    display: inline-block;
+    margin-top: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    background: #e5e7eb;
+    color: #374151;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+
+/* Mensajes */
+.pedido-error {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.pedido-loading,
+.pedido-empty {
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Header historial */
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.pedido-link {
+    font-size: 0.85rem;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+    .pedido-link:hover {
+        text-decoration: underline;
+    }
+
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.btn-secondary {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+}
+

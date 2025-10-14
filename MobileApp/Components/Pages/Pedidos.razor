@@ -1,0 +1,205 @@
+﻿@page "/pedidos/{CodCli:int}"
+@using Core.DTOs
+@using Core.DTOs.Core.DTOs
+@using Core.Interfaces
+@using MobileApp.Services
+@inject IPedidoService PedidoService
+@inject IClientService ClientService
+@inject ClientStateService ClientState
+
+<PageTitle>Pedidos</PageTitle>
+
+<div class="pedidos-container">
+    <!-- Cabecera -->
+    <h1 class="pedidos-title">PEDIDOS</h1>
+
+    <!-- Buscador -->
+    <div class="pedido-search">
+        <input type="text"
+               placeholder="Buscar Cliente o Número de pedido..."
+               @bind-value="PedidoBusqueda"
+               @bind-value:event="oninput"
+               class="pedido-input" />
+        <button class="pedido-btn"
+                @onclick="BuscarPedidoPorCodigo">
+            Buscar
+        </button>
+    </div>
+
+    <!-- Resultado de búsqueda -->
+    @if (pedidoBuscado != null)
+    {
+        <div class="pedido-card" @onclick="() => SeleccionarPedido(pedidoBuscado.Csid)">
+            <div>
+                <p class="pedido-card-title">Pedido #@pedidoBuscado.Csid</p>
+                <p class="pedido-card-sub">@pedidoBuscado.FecCbt.ToString("yyyy-MM-dd")</p>
+            </div>
+            <div class="pedido-card-right">
+                <p class="pedido-card-price">$@pedidoBuscado.ImpTotCbt.ToString("N2")</p>
+                <span class="pedido-status">Estado</span>
+            </div>
+        </div>
+    }
+    else if (pedidoBusquedaError)
+    {
+        <p class="pedido-error">No se encontró el pedido ingresado.</p>
+    }
+
+    <!-- Historial -->
+    <div class="pedido-header">
+        <h2 class="pedido-subtitle">HISTORIAL: @clientName</h2>
+        <a class="pedido-link">Ver todas</a>
+    </div>
+
+    @if (isLoading)
+    {
+        <p class="pedido-loading">Cargando historial...</p>
+    }
+    else if (!historial.Any())
+    {
+        <p class="pedido-empty">No hay pedidos registrados.</p>
+    }
+    else
+    {
+        @if (historial.Any())
+        {
+            <div class="paginacion">
+                <button class="btn-secondary" @onclick="PaginaAnterior" disabled="@(!hasPreviousPage)">Anterior</button>
+                <span>Página @currentPage</span>
+                <button class="btn-secondary" @onclick="PaginaSiguiente" disabled="@(!hasNextPage)">Siguiente</button>
+            </div>
+        }
+
+        @foreach (var ped in historial)
+        {
+            <div class="pedido-card" @onclick="() => IrADetalle(ped.Csid)">
+                <div>
+                    <p class="pedido-card-title">Pedido #@ped.Csid</p>
+                    <p class="pedido-card-sub">@ped.FecCbt.ToString("yyyy-MM-dd")</p>
+                </div>
+                <div class="pedido-card-right">
+                    <p class="pedido-card-price">$@ped.ImpTotCbt.ToString("N2")</p>
+                    <span class="pedido-status">Estado</span>
+                </div>
+            </div>
+        }
+    }
+    @if (!string.IsNullOrEmpty(pedidoSeleccionadoId))
+    {
+        <PedidoDetalle PedidoId="@pedidoSeleccionadoId" />
+    }
+
+</div>
+
+@code {
+    [Parameter] public int CodCli { get; set; }
+    [Inject] private NavigationManager Navigation { get; set; } = default!;
+    private string clientName = string.Empty;
+    private string PedidoBusqueda { get; set; } = "";
+    private PedidoDTO? pedidoBuscado;
+    private string? pedidoSeleccionadoId = null;
+    private bool pedidoBusquedaError = false;
+
+    private List<PedidoDTO> historial = new();
+    private bool isLoading = true;
+
+    // 🔹 Paginación
+    private int currentPage = 1;
+    private int pageSize = 50;
+    private bool hasNextPage = true;
+    private bool hasPreviousPage => currentPage > 1;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await CargarHistorial();
+    }
+
+    private async Task CargarHistorial()
+    {
+        if (CodCli <= 0)
+        {
+            historial = new();
+            clientName = string.Empty;
+            isLoading = false;
+            return;
+        }
+
+        isLoading = true;
+        StateHasChanged();
+
+        try
+        {
+            var cliente = await ClientService.GetClientePorIdAsync(CodCli);
+            clientName = cliente?.NomCli ?? $"Cliente {CodCli}";
+
+            // 👇 Llamamos a la API con paginación
+            var result = await PedidoService.ObtenerHistorialPedidos(CodCli, currentPage, pageSize);
+            historial = result?.ToList() ?? new List<PedidoDTO>();
+
+            // Si menos de pageSize, no hay siguiente página
+            hasNextPage = historial.Count == pageSize;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Pedidos] ❌ Error cargando historial: {ex.Message}");
+            historial = new List<PedidoDTO>();
+            clientName = string.Empty;
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task PaginaAnterior()
+    {
+        if (currentPage > 1)
+        {
+            currentPage--;
+            await CargarHistorial();
+        }
+    }
+
+    private async Task PaginaSiguiente()
+    {
+        if (hasNextPage)
+        {
+            currentPage++;
+            await CargarHistorial();
+        }
+    }
+
+    private async Task BuscarPedidoPorCodigo()
+    {
+        pedidoBusquedaError = false;
+        pedidoBuscado = null;
+
+        if (string.IsNullOrWhiteSpace(PedidoBusqueda))
+            return;
+
+        try
+        {
+            pedidoBuscado = await PedidoService.ObtenerPedidoPorCodigo(PedidoBusqueda);
+            if (pedidoBuscado == null)
+                pedidoBusquedaError = true;
+        }
+        catch
+        {
+            pedidoBusquedaError = true;
+        }
+    }
+
+    private void SeleccionarPedido(string csid)
+    {
+        pedidoSeleccionadoId = csid;
+    }
+
+    private void IrADetalle(string csid)
+    {
+        Navigation.NavigateTo($"/pedido/{csid}");
+    }
+}
+
+
+

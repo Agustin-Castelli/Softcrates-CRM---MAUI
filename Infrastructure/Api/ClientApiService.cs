@@ -43,5 +43,7 @@ namespace Infrastructure.Api
         }
 
         // Otros métodos según la interfaz IClienteService...
+
+
     }
 }

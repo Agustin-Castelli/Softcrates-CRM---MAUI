@@ -1,0 +1,277 @@
+﻿/* articulos.css */
+
+/* Reset para evitar scroll horizontal */
+* {
+    box-sizing: border-box;
+}
+
+.articulos-container,
+.articulos-container * {
+    margin: 0;
+    max-width: 100%;
+}
+
+.product-img {
+    width: 48px;
+    height: 48px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+/* Botones qty reducidos */
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+    .qty-btn.primary {
+        background: #0078d7;
+        color: #fff;
+    }
+
+    .qty-btn.danger {
+        background: #ef4444;
+        color: #fff;
+    }
+
+.qty-display {
+    min-width: 28px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.qty-btn:hover {
+    opacity: 0.9;
+}
+
+.articulos-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #f7f8fa;
+    gap: 8px;
+    padding: 4px; /* Reducido de 8px a 4px */
+    box-sizing: border-box;
+    margin: 0; /* Eliminar cualquier margen */
+    width: 100vw; /* Forzar ancho completo */
+    max-width: 100%; /* Prevenir overflow */
+    overflow-x: hidden; /* Ocultar scroll horizontal */
+}
+
+.articulos-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #ffffff;
+    padding: 8px 4px; /* Reducido padding lateral de 8px a 4px */
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+    .articulos-header .card {
+        margin-bottom: 8px;
+        padding: 10px;
+    }
+
+.articulos-lista {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0; /* Eliminado padding vertical */
+}
+
+.articulos-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    background: #ffffff;
+    padding: 8px 4px; /* Reducido padding lateral de 8px a 4px */
+    border-radius: 8px;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.04);
+}
+
+/* Buscador */
+.search-box input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+
+/* GRID layout: 2 columnas en mobile, 3 en pantallas anchas */
+.list.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px; /* Reducido de 8px a 6px */
+    align-items: start;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0; /* Eliminar márgenes */
+}
+
+/* Más columnas en pantallas anchas (tablet/desktop) */
+@media (min-width: 720px) {
+    .list.grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        padding: 6px; /* Padding restaurado en pantallas grandes */
+    }
+}
+
+/* Item estilizado, compacto */
+.list.grid .list-item {
+    background: white;
+    border-radius: 8px;
+    padding: 6px; /* Reducido de 8px a 6px */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reducido de 6px a 5px */
+    min-height: 115px; /* Reducido de 120px */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%; /* Prevenir overflow */
+    overflow: hidden; /* Ocultar contenido que se desborde */
+}
+
+/* Imagen: ocupa todo el ancho del card, proporción cuadrada */
+.list.grid .product-img {
+    width: 100%;
+    height: 86px; /* Reducido de 96px a 86px */
+    border-radius: 6px;
+    background: linear-gradient(180deg,#f1f1f1,#e9e9e9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #888;
+    overflow: hidden;
+}
+
+/* Info (título + precio) centrada y compacta */
+.list.grid .li-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px; /* Reducido de 4px a 3px */
+}
+
+.list.grid .li-title {
+    font-size: 0.85rem; /* Reducido de 0.88rem */
+    font-weight: 600;
+    color: #222;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Permitir máximo 2 líneas */
+    -webkit-box-orient: vertical;
+    word-break: break-word; /* Romper palabras largas */
+    width: 100%;
+}
+
+.list.grid .li-amount {
+    font-size: 0.85rem; /* Reducido de 0.88rem */
+    color: #2a4365;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* Cantidad / botones en fila, compactos, alineados al final */
+.list.grid .li-right {
+    display: flex;
+    gap: 6px; /* Reducido de 8px a 6px */
+    align-items: center;
+    margin-top: auto;
+}
+
+/* Si prefieres el layout en fila (list view clásico) */
+.list:not(.grid) .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Precio alineado a la derecha en la vista de tabla / list view */
+.precio-col, .pedido-table-subtotal, .pedido-total-value {
+    text-align: right;
+}
+
+/* Hover y efecto clickable en cards */
+.list.grid .list-item,
+.list:not(.grid) .list-item {
+    cursor: pointer;
+    transition: transform .08s ease, box-shadow .12s ease;
+}
+
+    .list.grid .list-item:hover,
+    .list:not(.grid) .list-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+/* Ajustes responsive para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .list.grid {
+        gap: 6px; /* Gap aún más pequeño en móviles pequeños */
+    }
+
+        .list.grid .list-item {
+            padding: 6px; /* Padding más compacto */
+        }
+
+        .list.grid .product-img {
+            height: 76px; /* Imagen más pequeña */
+        }
+
+    .qty-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 0.9rem;
+    }
+
+    .list.grid .li-title {
+        font-size: 0.85rem;
+    }
+
+    .list.grid .li-amount {
+        font-size: 0.82rem;
+    }
+}
+
+/* Botón resumen siempre visible */
+.articulos-footer .btn-primary.full {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.loading-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}

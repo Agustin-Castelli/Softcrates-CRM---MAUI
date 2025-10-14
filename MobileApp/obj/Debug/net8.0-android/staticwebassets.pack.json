@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\MobileApp.styles.css"
     },
     {
+      "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Articulos.css",
+      "PackagePath": "staticwebassets\\css\\Articulos.css"
+    },
+    {
+      "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\PedidoDetalle.css",
+      "PackagePath": "staticwebassets\\css\\PedidoDetalle.css"
+    },
+    {
+      "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Pedidos.css",
+      "PackagePath": "staticwebassets\\css\\Pedidos.css"
+    },
+    {
       "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -15,6 +27,10 @@
     {
       "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\crear-pedido.css",
+      "PackagePath": "staticwebassets\\css\\crear-pedido.css"
     },
     {
       "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\dashboard.css",
@@ -39,10 +55,6 @@
     {
       "Id": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.MobileApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.MobileApp.Microsoft.AspNetCore.StaticWebAssets.props",

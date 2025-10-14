@@ -1,0 +1,96 @@
+﻿@page "/crear-pedido"
+@using Core.DTOs
+@using Core.Interfaces
+@using Infrastructure.Api
+@using MobileApp.Services
+@inject CartStateService CartState
+@inject ICrearPedidoService PedidoService
+@inject ClientStateService ClientState
+
+<div class="crear-pedido-wrap">
+    <h2 class="pedido-title">Nuevo Pedido para @ClientState.SelectedClient?.NomCli</h2>
+
+    @if (CartState.Items.Count == 0)
+    {
+        <div class="card empty-card">
+            <p>No hay artículos seleccionados.</p>
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="table-scroll">
+                <table class="pedido-detalle">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Artículo</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in CartState.Items)
+                        {
+                            <tr>
+                                <td>@item.CodArt</td>
+                                <td>@item.DesArt</td>
+                                <td>@item.Cantidad</td>
+                                <td class="precio-col">@item.PrecioUnitario.ToString("C")</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="pedido-total-label">Total</td>
+                            <td class="pedido-total-value">@CartState.Items.Sum(i => i.Cantidad * i.PrecioUnitario).ToString("C")</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+
+        <button class="btn-primary full" @onclick="ConfirmarPedido">
+            Confirmar Pedido
+        </button>
+    }
+</div>
+
+@code {
+    private List<CrearPedidoDetalleDTO> carrito = new();
+
+    protected override void OnInitialized()
+    {
+        carrito = CartState.Items.ToList();
+    }
+
+    private async Task ConfirmarPedido()
+    {
+        if (ClientState.SelectedClient == null || carrito.Count == 0)
+            return;
+
+        var pedido = new CrearPedidoDTO
+        {
+            CodTipCbt = 96,
+            CemCbt = 1,
+            NroCbt = 0,
+            CodCli = ClientState.SelectedClient.CodCli,
+            Detalles = carrito
+        };
+
+        var ok = await PedidoService.CrearPedidoAsync(pedido);
+
+        if (ok)
+        {
+            CartState.Clear();
+            Console.WriteLine("Pedido creado con éxito");
+        }
+        else
+        {
+            Console.WriteLine("Error al crear el pedido");
+        }
+    }
+}
+
+

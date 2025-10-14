@@ -40,8 +40,14 @@
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\Resources\Raw\CaferLitoralCRM.db">
+      <PackagePath>CaferLitoralCRM.db</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\Articulos.css">
+      <PackagePath>wwwroot\css\Articulos.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
@@ -49,11 +55,20 @@
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\crear-pedido.css">
+      <PackagePath>wwwroot\css\crear-pedido.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\dashboard.css">
       <PackagePath>wwwroot\css\dashboard.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\login.css">
       <PackagePath>wwwroot\css\login.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\PedidoDetalle.css">
+      <PackagePath>wwwroot\css\PedidoDetalle.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\css\Pedidos.css">
+      <PackagePath>wwwroot\css\Pedidos.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
@@ -238,11 +253,23 @@
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
+    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.deps.json">
+      <PackagePath>MobileApp.deps.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\azure.core\1.47.1\lib\net8.0\Azure.Core.dll">
+      <PackagePath>Azure.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\azure.identity\1.14.2\lib\net8.0\Azure.Identity.dll">
+      <PackagePath>Azure.Identity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\dapper\2.1.66\lib\net8.0\Dapper.dll">
+      <PackagePath>Dapper.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.aspnetcore.authorization\8.0.10\lib\net8.0\Microsoft.AspNetCore.Authorization.dll">
       <PackagePath>Microsoft.AspNetCore.Authorization.dll</PackagePath>
@@ -265,20 +292,17 @@
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.aspnetcore.metadata\8.0.10\lib\net8.0\Microsoft.AspNetCore.Metadata.dll">
       <PackagePath>Microsoft.AspNetCore.Metadata.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.bcl.asyncinterfaces\8.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll">
+      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.bcl.cryptography\8.0.0\lib\net8.0\Microsoft.Bcl.Cryptography.dll">
+      <PackagePath>Microsoft.Bcl.Cryptography.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll">
+      <PackagePath>Microsoft.Data.SqlClient.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlite.core\8.0.19\lib\net8.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.entityframeworkcore\8.0.19\lib\net8.0\Microsoft.EntityFrameworkCore.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.entityframeworkcore.abstractions\8.0.19\lib\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.Abstractions.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.entityframeworkcore.relational\8.0.19\lib\net8.0\Microsoft.EntityFrameworkCore.Relational.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.Relational.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.entityframeworkcore.sqlite.core\8.0.19\lib\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.Sqlite.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.caching.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Caching.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Caching.Abstractions.dll</PackagePath>
@@ -307,9 +331,6 @@
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.2\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.dependencymodel\8.0.2\lib\net8.0\Microsoft.Extensions.DependencyModel.dll">
-      <PackagePath>Microsoft.Extensions.DependencyModel.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.diagnostics\8.0.1\lib\net8.0\Microsoft.Extensions.Diagnostics.dll">
       <PackagePath>Microsoft.Extensions.Diagnostics.dll</PackagePath>
     </AppxPackagedFile>
@@ -337,7 +358,7 @@
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.logging\8.0.1\lib\net8.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.2\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.3\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.extensions.logging.debug\8.0.1\lib\net8.0\Microsoft.Extensions.Logging.Debug.dll">
@@ -354,6 +375,30 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.graphics.win2d\1.2.0\lib\net6.0-windows10.0.19041.0\Microsoft.Graphics.Canvas.Interop.dll">
       <PackagePath>Microsoft.Graphics.Canvas.Interop.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identity.client\4.73.1\lib\net8.0\Microsoft.Identity.Client.dll">
+      <PackagePath>Microsoft.Identity.Client.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identity.client.extensions.msal\4.73.1\lib\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll">
+      <PackagePath>Microsoft.Identity.Client.Extensions.Msal.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identitymodel.abstractions\7.7.1\lib\net8.0\Microsoft.IdentityModel.Abstractions.dll">
+      <PackagePath>Microsoft.IdentityModel.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identitymodel.jsonwebtokens\7.7.1\lib\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll">
+      <PackagePath>Microsoft.IdentityModel.JsonWebTokens.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identitymodel.logging\7.7.1\lib\net8.0\Microsoft.IdentityModel.Logging.dll">
+      <PackagePath>Microsoft.IdentityModel.Logging.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identitymodel.protocols\7.7.1\lib\net8.0\Microsoft.IdentityModel.Protocols.dll">
+      <PackagePath>Microsoft.IdentityModel.Protocols.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identitymodel.protocols.openidconnect\7.7.1\lib\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <PackagePath>Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.identitymodel.tokens\7.7.1\lib\net8.0\Microsoft.IdentityModel.Tokens.dll">
+      <PackagePath>Microsoft.IdentityModel.Tokens.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.io.recyclablememorystream\3.0.1\lib\net6.0\Microsoft.IO.RecyclableMemoryStream.dll">
       <PackagePath>Microsoft.IO.RecyclableMemoryStream.dll</PackagePath>
@@ -381,6 +426,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.maui.graphics.win2d.winui.desktop\8.0.100\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll">
       <PackagePath>Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.sqlserver.server\1.0.0\lib\netstandard2.0\Microsoft.SqlServer.Server.dll">
+      <PackagePath>Microsoft.SqlServer.Server.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
@@ -436,8 +484,74 @@
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.6\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.clientmodel\1.5.1\lib\net8.0\System.ClientModel.dll">
+      <PackagePath>System.ClientModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.configuration.configurationmanager\8.0.1\lib\net8.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.diagnostics.eventlog\8.0.1\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll">
+      <PackagePath>System.Diagnostics.EventLog.Messages.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.diagnostics.eventlog\8.0.1\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll">
+      <PackagePath>System.Diagnostics.EventLog.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.identitymodel.tokens.jwt\7.7.1\lib\net8.0\System.IdentityModel.Tokens.Jwt.dll">
+      <PackagePath>System.IdentityModel.Tokens.Jwt.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.io.pipelines\8.0.0\lib\net8.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.memory.data\8.0.1\lib\net8.0\System.Memory.Data.dll">
+      <PackagePath>System.Memory.Data.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.security.cryptography.pkcs\8.0.1\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll">
+      <PackagePath>System.Security.Cryptography.Pkcs.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.security.cryptography.protecteddata\8.0.0\lib\net8.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.text.json\8.0.5\lib\net8.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\cs\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>cs\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\de\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>de\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\es\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>es\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\fr\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>fr\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\it\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>it\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\ja\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>ja\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\ko\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>ko\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\pl\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>pl\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>pt-BR\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\ru\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>ru\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\tr\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>tr\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.SqlClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient\6.1.1\lib\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.SqlClient.resources.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.maui.controls.core\8.0.100\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>
@@ -541,6 +655,9 @@
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.maui.controls.core\8.0.100\lib\net8.0-windows10.0.19041\zh-Hant\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-Hant\Microsoft.Maui.Controls.resources.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.data.sqlclient.sni.runtime\6.0.2\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll">
+      <PackagePath>Microsoft.Data.SqlClient.SNI.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.graphics.win2d\1.2.0\runtimes\win-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
@@ -559,210 +676,6 @@
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\UI\bin\Debug\net8.0\UI.dll">
       <PackagePath>UI.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.deps.json">
-      <PackagePath>MobileApp.deps.json</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\humanizer.core\2.14.1\lib\net6.0\Humanizer.dll">
-      <PackagePath>Humanizer.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll">
-      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.dll">
-      <PackagePath>Microsoft.CodeAnalysis.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll">
-      <PackagePath>Microsoft.CodeAnalysis.CSharp.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
-      <PackagePath>Microsoft.CodeAnalysis.CSharp.Workspaces.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll">
-      <PackagePath>Microsoft.CodeAnalysis.Workspaces.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.entityframeworkcore.design\8.0.19\lib\net8.0\Microsoft.EntityFrameworkCore.Design.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.Design.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\mono.texttemplating\2.2.1\lib\netstandard2.0\Mono.TextTemplating.dll">
-      <PackagePath>Mono.TextTemplating.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.codedom\4.4.0\lib\netstandard2.0\System.CodeDom.dll">
-      <PackagePath>System.CodeDom.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.composition.attributedmodel\6.0.0\lib\net6.0\System.Composition.AttributedModel.dll">
-      <PackagePath>System.Composition.AttributedModel.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.composition.convention\6.0.0\lib\net6.0\System.Composition.Convention.dll">
-      <PackagePath>System.Composition.Convention.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.composition.hosting\6.0.0\lib\net6.0\System.Composition.Hosting.dll">
-      <PackagePath>System.Composition.Hosting.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.composition.runtime\6.0.0\lib\net6.0\System.Composition.Runtime.dll">
-      <PackagePath>System.Composition.Runtime.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\system.composition.typedparts\6.0.0\lib\net6.0\System.Composition.TypedParts.dll">
-      <PackagePath>System.Composition.TypedParts.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>cs\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>de\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>es\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>fr\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>it\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>ja\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>ko\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>pl\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>pt-BR\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>ru\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>tr\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>zh-Hans\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.common\4.5.0\lib\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll">
-      <PackagePath>zh-Hant\Microsoft.CodeAnalysis.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>cs\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>de\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>es\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>fr\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>it\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>ja\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>ko\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>pl\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>ru\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>tr\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp\4.5.0\lib\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll">
-      <PackagePath>zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.csharp.workspaces\4.5.0\lib\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
-      <PackagePath>zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>cs\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>de\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>es\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>fr\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>it\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>ja\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>ko\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>pl\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>ru\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>tr\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.codeanalysis.workspaces.common\4.5.0\lib\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll">
-      <PackagePath>zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json">
-      <PackagePath>MobileApp.staticwebassets.endpoints.json</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\.nuget\packages\microsoft.maui.controls.compatibility\8.0.100\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
     </AppxPackagedFile>
@@ -776,7 +689,7 @@
       <PackagePath>wwwroot\MobileApp.styles.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\MobileApp.bundle.scp.css">
-      <PackagePath>wwwroot\MobileApp.psbaedeag8.bundle.scp.css</PackagePath>
+      <PackagePath>wwwroot\MobileApp.bundle.scp.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>

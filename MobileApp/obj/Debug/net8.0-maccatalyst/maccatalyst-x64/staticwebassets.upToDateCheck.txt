@@ -1,9 +1,0 @@
-wwwroot\css\app.css
-wwwroot\css\bootstrap\bootstrap.min.css
-wwwroot\css\bootstrap\bootstrap.min.css.map
-wwwroot\css\dashboard.css
-wwwroot\css\login.css
-wwwroot\favicon.png
-wwwroot\images\LogoCL.png
-wwwroot\images\LogoSoftcrates.png
-wwwroot\index.html

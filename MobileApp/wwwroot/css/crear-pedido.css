@@ -1,0 +1,97 @@
+﻿.crear-pedido-wrap {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pedido-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: center;
+}
+
+.empty-card {
+    text-align: center;
+    padding: 24px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Tabla de pedido */
+.pedido-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+    .pedido-detalle th {
+        background: #f5f5f5;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 2px solid #ddd;
+        font-weight: bold;
+    }
+
+    .pedido-detalle td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .pedido-detalle .precio-col {
+        text-align: right;
+    }
+
+    .pedido-detalle tr:hover {
+        background: #fafafa;
+    }
+
+    .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* mejora el scroll en iOS y Android */
+    }
+
+    .table-scroll table {
+        min-width: 600px; /* o el ancho mínimo que necesites para que las columnas no se compriman demasiado */
+    }
+
+    /* Estilo del total */
+    .pedido-detalle tfoot td {
+        font-weight: bold;
+        padding: 14px;
+        border-top: 2px solid #2a4365;
+    }
+
+    .pedido-total-label {
+        text-align: right;
+        font-size: 1.1rem;
+        color: #444;
+    }
+
+    .pedido-total-value {
+        font-size: 1.2rem;
+        color: #2a4365;
+    }
+
+
+/* Botón de confirmación */
+.btn-primary.full {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0078d7;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 12px;
+}
+
+    .btn-primary.full:hover {
+        background-color: #005fa3;
+    }

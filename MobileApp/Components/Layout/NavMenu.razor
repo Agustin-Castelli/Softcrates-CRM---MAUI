@@ -1,59 +1,75 @@
-﻿@inject MobileApp.Services.IAuthState AuthState
+﻿@using MobileApp.Services
+@inject MobileApp.Services.IAuthState AuthState
+@inject NavigationManager Navigation
+@inject ClientStateService ClientState
 @implements IDisposable
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">MobileApp</a>
+        <a class="navbar-brand" href="">Softcrates CRM</a>
     </div>
 </div>
+
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
         @if (AuthState.IsLoggedIn)
         {
+            <!-- CLIENTES -->
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                    <span class="bi bi-person-fill me-2"></span> Clientes
                 </NavLink>
             </div>
-            @if (AuthState.CurrentUser != null)
+
+            <!-- PEDIDOS -->
+            @if (ClientState.SelectedClient != null)
             {
                 <div class="nav-item px-3">
-                    <span class="nav-link text-muted">
-                        Hola, @AuthState.CurrentUser.Name
-                    </span>
+                    <NavLink class="nav-link" href="@($"/pedidos/{ClientState.SelectedClient.CodCli}")">
+                        <span class="bi bi-file-text-fill me-2"></span> Pedidos
+                    </NavLink>
                 </div>
             }
+
+            <!-- CERRAR SESIÓN -->
             <div class="nav-item px-3">
                 <button class="btn btn-link nav-link" @onclick="LogoutAsync">
-                    <span class="bi bi-box-arrow-right"></span> Logout
+                    <span class="bi bi-box-arrow-right me-2"></span> Cerrar Sesión
                 </button>
             </div>
         }
         else
         {
+            <!-- INICIAR SESIÓN -->
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="/login">
-                    <span class="bi bi-box-arrow-in-right"></span> Login
+                    <span class="bi bi-box-arrow-in-right me-2"></span> Iniciar Sesión
                 </NavLink>
             </div>
         }
     </nav>
 </div>
 
+
 @code {
     protected override void OnInitialized()
     {
         AuthState.OnAuthenticationStateChanged += StateHasChanged;
+        ClientState.OnChange += StateHasChanged;   // 👈 suscripción extra
     }
 
     private async Task LogoutAsync()
     {
         AuthState.Logout();
+        StateHasChanged();
+        Navigation.NavigateTo("/login", forceLoad: true);
     }
 
     public void Dispose()
     {
         AuthState.OnAuthenticationStateChanged -= StateHasChanged;
+        ClientState.OnChange -= StateHasChanged;   // 👈 limpieza
     }
 }

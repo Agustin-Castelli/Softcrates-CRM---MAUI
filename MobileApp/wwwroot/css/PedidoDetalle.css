@@ -1,0 +1,120 @@
+﻿/* Contenedor general */
+.pedido-detalle-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Botón volver */
+.pedido-volver-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+    .pedido-volver-btn:hover {
+        background: #1565c0;
+    }
+
+/* Cabecera */
+.pedido-detalle-header {
+    margin-bottom: 1.5rem;
+}
+
+.pedido-detalle-title {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.pedido-total {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+/* Subtítulo */
+.pedido-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.3rem;
+    color: #444;
+}
+
+/* Tabla */
+.pedido-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+    .pedido-table th,
+    .pedido-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .pedido-table-subtotal {
+        text-align: right;
+    }
+
+    .pedido-table th {
+        background: #f5f5f5;
+        font-weight: bold;
+        color: #444;
+    }
+
+    .pedido-table tr:hover {
+        background: #f0f0f0;
+    }
+
+    .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* mejora el scroll en iOS y Android */
+    }
+
+    .table-scroll table {
+        min-width: 600px; /* o el ancho mínimo que necesites para que las columnas no se compriman demasiado */
+    }
+
+/* Mensajes */
+.pedido-loading,
+.pedido-error,
+.pedido-empty {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.pedido-loading {
+    background: #e3f2fd;
+    color: #0d47a1;
+}
+
+.pedido-error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.pedido-empty {
+    background: #f5f5f5;
+    color: #555;
+}

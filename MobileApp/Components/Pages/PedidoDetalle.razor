@@ -1,0 +1,108 @@
+﻿@page "/pedido/{PedidoId}"
+@using Core.DTOs
+@using Core.DTOs.Core.DTOs
+@using Core.Interfaces
+@inject IPedidoService PedidoService
+@inject IClientService ClientService
+
+<div class="pedido-detalle-container">
+    @if (isLoading)
+    {
+        <p class="pedido-loading">Cargando pedido...</p>
+    }
+    else if (pedido == null || cliente == null)
+    {
+        <p class="pedido-error">No se encontró el pedido.</p>
+    }
+    else
+    {
+        <button class="pedido-volver-btn" @onclick="VolverAtras">← Volver</button>
+
+        <!-- Cabecera del pedido -->
+        <div class="pedido-detalle-header">
+            <h2 class="pedido-detalle-title">Pedido #@pedido.Csid</h2>
+            <p><strong>Fecha:</strong> @pedido.FecCbt.ToString("yyyy-MM-dd")</p>
+            <p><strong>Cliente:</strong> @cliente.NomCli</p>
+            <p class="pedido-total"><strong>Total:</strong> $@pedido.ImpTotCbt.ToString("N2")</p>
+        </div>
+
+        <!-- Detalles del pedido -->
+        <div class="pedido-detalle-items">
+            <h3 class="pedido-subtitle">Detalles</h3>
+            @if (pedido.Detalles != null && pedido.Detalles.Any())
+            {
+                <div class="table-scroll">
+                    <table class="pedido-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descripción</th>
+                                <th>Cantidad</th>
+                                <th>Precio Unit.</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var det in pedido.Detalles)
+                            {
+                                <tr>
+                                    <td>@det.CodArt</td>
+                                    <td>@det.DesArtAmp</td>
+                                    <td>@det.CanArt</td>
+                                    <td class="pedido-table-subtotal">$@det.PreArt.ToString("N2")</td>
+                                    <td class="pedido-table-subtotal">$@(det.CanArt* det.PreArt)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            }
+            else
+            {
+                <p class="pedido-empty">No hay artículos cargados en este pedido.</p>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public string? PedidoId { get; set; }
+    [Inject] NavigationManager Navigation { get; set; } = default!;
+    private PedidoDTO? pedido;
+    private ClientData? cliente;
+    private bool isLoading = true;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (string.IsNullOrWhiteSpace(PedidoId))
+        {
+            pedido = null;
+            cliente = null;
+            isLoading = false;
+            return;
+        }
+
+        isLoading = true;
+        try
+        {
+            pedido = await PedidoService.ObtenerPedidoPorCodigo(PedidoId);
+            cliente = await ClientService.GetClientePorIdAsync(pedido.CodCli);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[PedidoDetalle] Error: {ex.Message}");
+            pedido = null;
+            cliente = null;
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void VolverAtras()
+    {
+        Navigation.NavigateTo($"/pedidos/{pedido?.CodCli}");
+    }
+}

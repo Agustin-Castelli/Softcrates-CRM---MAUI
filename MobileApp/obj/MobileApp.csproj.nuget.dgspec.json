@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -114,8 +113,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -142,12 +140,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
     "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MobileApp.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.2",
       "restore": {
         "projectUniqueName": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MobileApp.csproj",
         "projectName": "MobileApp",
@@ -166,8 +164,6 @@
         ],
         "originalTargetFrameworks": [
           "net8.0-android",
-          "net8.0-ios",
-          "net8.0-maccatalyst",
           "net8.0-windows10.0.19041.0"
         ],
         "sources": {
@@ -178,34 +174,6 @@
         "frameworks": {
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
-            "projectReferences": {
-              "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Core.csproj"
-              },
-              "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Infrastructure.csproj"
-              },
-              "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\UI\\UI.csproj": {
-                "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\UI\\UI.csproj"
-              }
-            }
-          },
-          "net8.0-ios18.0": {
-            "targetAlias": "net8.0-ios",
-            "projectReferences": {
-              "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Core.csproj"
-              },
-              "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Infrastructure.csproj"
-              },
-              "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\UI\\UI.csproj": {
-                "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\UI\\UI.csproj"
-              }
-            }
-          },
-          "net8.0-maccatalyst18.0": {
-            "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
               "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Core.csproj": {
                 "projectPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Core.csproj"
@@ -242,28 +210,25 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[8.0.100, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[8.0.19, )"
+              "version": "[6.1.1, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Data.Sqlite": {
               "target": "Package",
               "version": "[8.0.19, )"
             },
@@ -286,7 +251,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.19, )",
+              "version": "[8.0.3, )",
               "autoReferenced": true
             }
           },
@@ -309,177 +274,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
-        },
-        "net8.0-ios18.0": {
-          "targetAlias": "net8.0-ios",
-          "dependencies": {
-            "Microsoft.AspNetCore.Components.WebView.Maui": {
-              "target": "Package",
-              "version": "[8.0.100, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.Extensions.Http": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.Maui.Controls": {
-              "target": "Package",
-              "version": "[8.0.100, )"
-            },
-            "Microsoft.Maui.Controls.Compatibility": {
-              "target": "Package",
-              "version": "[8.0.100, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.19, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.iOS.Ref.net8.0_18.0",
-              "version": "[18.0.8324, 18.0.8324]"
-            },
-            {
-              "name": "Microsoft.iOS.Runtime.ios-arm64.net8.0_18.0",
-              "version": "[18.0.8324, 18.0.8324]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.iOS": {
-              "privateAssets": "all"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
-        },
-        "net8.0-maccatalyst18.0": {
-          "targetAlias": "net8.0-maccatalyst",
-          "dependencies": {
-            "Microsoft.AspNetCore.Components.WebView.Maui": {
-              "target": "Package",
-              "version": "[8.0.100, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.Extensions.Http": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.Maui.Controls": {
-              "target": "Package",
-              "version": "[8.0.100, )"
-            },
-            "Microsoft.Maui.Controls.Compatibility": {
-              "target": "Package",
-              "version": "[8.0.100, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.19, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "xamarinios10",
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.MacCatalyst.Ref.net8.0_18.0",
-              "version": "[18.0.8324, 18.0.8324]"
-            },
-            {
-              "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64.net8.0_18.0",
-              "version": "[18.0.8324, 18.0.8324]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.MacCatalyst": {
-              "privateAssets": "all"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[8.0.100, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[8.0.19, )"
+              "version": "[6.1.1, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Data.Sqlite": {
               "target": "Package",
               "version": "[8.0.19, )"
             },
@@ -514,18 +326,18 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.57, 10.0.19041.57]"
+              "version": "[10.0.19041.31, 10.0.19041.31]"
             }
           ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.Windows.SDK.NET.Ref.Windows": {
+            "Microsoft.Windows.SDK.NET.Ref": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -539,12 +351,6 @@
           "#import": []
         },
         "android-x86": {
-          "#import": []
-        },
-        "ios-arm64": {
-          "#import": []
-        },
-        "maccatalyst-x64": {
           "#import": []
         },
         "win10-x64": {
@@ -596,8 +402,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -618,7 +423,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

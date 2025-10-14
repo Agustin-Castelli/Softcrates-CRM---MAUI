@@ -2,10 +2,31 @@
 .login-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     height: 100vh;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     padding: 20px;
+    padding-bottom: 100px;
+}
+
+/* ScrollView para intentar que se sigan visualizando los inputs al abrirse el teclado del teléfono */
+.login-scroll {
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+@media (max-height: 700px) {
+    .login-container {
+        justify-content: flex-start;
+        
+    }
+}
+
+/* Cuando el teclado está abierto, agregaremos una clase desde JS */
+.keyboard-open .login-scroll {
+    margin-bottom: 300px; /* margen para levantar el contenido */
 }
 
 /* Tarjeta principal */
