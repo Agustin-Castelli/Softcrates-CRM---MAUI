@@ -237,6 +237,7 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.AssemblyInfoInputs.cache
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.AssemblyInfo.cs
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.sourcelink.json
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.csproj.Up2Date
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MobileApp.dll

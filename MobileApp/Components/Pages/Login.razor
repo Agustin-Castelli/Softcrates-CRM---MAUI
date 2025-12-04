@@ -2,56 +2,57 @@
 @layout MobileApp.Components.Layout.MainLayout
 @using Core.DTOs
 @using Core.Interfaces
+@using MobileApp.Services
 @inject IUserService UserService
 @inject MobileApp.Services.IAuthState AuthState
 @inject NavigationManager Navigation
+@inject INetworkService NetworkService
+@inject IDialogService DialogService
 
 <div class="login-scroll">
-<div class="login-wrapper">
-    <div class="login-card">
-        @* <img src="images/LogoCL.png" alt="Logo Empresa" class="logo-empresa"/> *@
-        <h1 class="login-title">SOFTCRATES CRM</h1>
-        <img src="images/LogoSoftcrates.png" alt="Logo Sistema" class="logo-sistema"/>
+    <div class="login-wrapper">
+        <div class="login-card">
+            @* <img src="images/LogoCL.png" alt="Logo Empresa" class="logo-empresa"/> *@
+            <h1 class="login-title">SOFTCRATES CRM</h1>
+            <img src="images/LogoSoftcrates.png" alt="Logo Sistema" class="logo-sistema" />
 
-        @if (!string.IsNullOrEmpty(errorMessage))
-        {
-            <div class="error-message">@errorMessage</div>
-        }
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="error-message">@errorMessage</div>
+            }
 
-        <div class="form-group">
-            <label>Usuario</label>
-            <input type="text"
-                   @bind="credentials.Username"
-                   placeholder="Ingrese su nombre de usuario"
-                   @onkeydown="HandleKeyPress" />
-        </div>
-
-        <div class="form-group">
-            <label>Contraseña</label>
-            <div class="password-container">
-                <input type="@passwordFieldType"
-                       @bind="credentials.Password"
-                       placeholder="Ingrese su contraseña"
+            <div class="form-group">
+                <label>Usuario</label>
+                <input type="text"
+                       @bind="credentials.Username"
+                       placeholder="Ingrese su nombre de usuario"
                        @onkeydown="HandleKeyPress" />
-                <button type="button" class="btn-eye" @onclick="TogglePasswordVisibility">👁</button>
             </div>
+
+            <div class="form-group">
+                <label>Contraseña</label>
+                <div class="password-container">
+                    <input type="@passwordFieldType"
+                           @bind="credentials.Password"
+                           placeholder="Ingrese su contraseña"
+                           @onkeydown="HandleKeyPress" />
+                    <button type="button" class="btn-eye" @onclick="TogglePasswordVisibility">👁</button>
+                </div>
+            </div>
+
+            <button class="btn-login" @onclick="LoginAsync" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Ingresando...</span>
+                }
+                else
+                {
+                    <span>Ingresar</span>
+                }
+            </button>
         </div>
-
-
-        <button class="btn-login" @onclick="LoginAsync" disabled="@isLoading">
-            @if (isLoading)
-            {
-                <span>Ingresando...</span>
-            }
-            else
-            {
-                <span>Ingresar</span>
-            }
-        </button>
     </div>
 </div>
-</div>
-
 
 @code {
     private UserLoginDto credentials = new();
@@ -64,6 +65,28 @@
         if (AuthState.IsLoggedIn)
         {
             Navigation.NavigateTo("/", true);
+            return;
+        }
+
+        // Verificar si está usando datos móviles al cargar el login
+        await CheckCellularDataUsage();
+    }
+
+    private async Task CheckCellularDataUsage()
+    {
+        try
+        {
+            if (NetworkService.IsUsingCellularData())
+            {
+                await DialogService.ShowAlertAsync(
+                    "⚠️ Datos móviles activos",
+                    "Estás usando datos móviles. Para evitar consumo excesivo, te recomendamos conectarte a WiFi antes de sincronizar."
+                );
+            }
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"[LOGIN] Error verificando red: {ex.Message}");
         }
     }
 
@@ -77,6 +100,7 @@
         try
         {
             var result = await UserService.LoginAsync(credentials);
+
             if (result != null)
             {
                 AuthState.SetLoggedIn(true, result);

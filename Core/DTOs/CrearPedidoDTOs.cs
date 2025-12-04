@@ -12,6 +12,8 @@ namespace Core.DTOs
         public short CemCbt { get; set; } = 1;
         public int NroCbt { get; set; }   // lo resolvemos más adelante
         public int CodCli { get; set; }
+        public int Confirmado { get; set; } = 0;
+        public int NroBocEnt { get; set; }
 
         public List<CrearPedidoDetalleDTO> Detalles { get; set; } = new();
     }

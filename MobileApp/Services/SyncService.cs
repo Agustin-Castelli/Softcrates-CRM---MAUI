@@ -246,7 +246,6 @@ namespace MobileApp.Services
         /// </summary>
         public async Task<SyncResult> SyncAsync(CancellationToken ct = default)
         {
-            // Evitar sincronizaciones concurrentes
             if (!System.Threading.Monitor.TryEnter(_syncLock))
             {
                 return new SyncResult { Message = "Sincronización de pedidos ya en curso" };
@@ -254,11 +253,11 @@ namespace MobileApp.Services
 
             try
             {
-                _logger?.LogInformation("[SYNC] Iniciando sincronización de pedidos...");
+                _logger?.LogInformation("[SYNC] Iniciando sincronización de pedidos desde SQL Server...");
 
                 var result = new SyncResult();
 
-                // 1) Obtener pedidos desde la API
+                // 1. Obtener TODOS los pedidos desde SQL Server
                 IEnumerable<PedidoDTO> listado;
                 try
                 {
@@ -272,160 +271,119 @@ namespace MobileApp.Services
 
                 var lista = listado?.ToList() ?? new List<PedidoDTO>();
                 result.TotalFetched = lista.Count;
+
                 if (!lista.Any())
                 {
-                    result.Message = "No se encontraron pedidos en la API";
+                    result.Message = "No se encontraron pedidos en SQL Server";
                     return result;
                 }
 
-                // 2) Abrir conexión SQLite y transacción
+                // 2. Abrir conexión SQLite
                 if (_conn.State != ConnectionState.Open)
                     await _conn.OpenAsync(ct);
 
-                // Diagnóstico: listar tablas y esquema
-                try
+                // 3. Obtener los csid que YA EXISTEN en SQLite con origen 'Servidor'
+                var csidsExistentes = (await _conn.QueryAsync<string>(
+                    "SELECT csid FROM PedWebCab WHERE OrigenPedido = 'Servidor';"
+                )).ToHashSet();
+
+                _logger?.LogInformation("[SYNC] Csids existentes en SQLite: {csids}", string.Join(", ", csidsExistentes));
+                _logger?.LogInformation("[SYNC] Pedidos ya sincronizados en SQLite: {count}", csidsExistentes.Count);
+
+                // 4. Filtrar solo los pedidos NUEVOS (que no están en SQLite)
+                var pedidosNuevos = lista.Where(p => !csidsExistentes.Contains(p.Csid)).ToList();
+
+                _logger?.LogInformation("[SYNC] Csids nuevos desde servidor: {csids}", string.Join(", ", pedidosNuevos.Select(p => p.Csid)));
+
+                if (!pedidosNuevos.Any())
                 {
-                    _logger?.LogInformation("[SYNC] ConnectionString: {cs}", _conn.ConnectionString);
-                    var tables = (await _conn.QueryAsync<string>("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;")).ToList();
-                    _logger?.LogInformation("[SYNC] Tablas en DB: {tables}", tables == null ? "<none>" : string.Join(", ", tables));
-                    var schemaCab = await _conn.QueryFirstOrDefaultAsync<string>("SELECT sql FROM sqlite_master WHERE type='table' AND name = @name;", new { name = "PedWebCab" });
-                    var schemaArt = await _conn.QueryFirstOrDefaultAsync<string>("SELECT sql FROM sqlite_master WHERE type='table' AND name = @name;", new { name = "PedWebArt" });
-                    _logger?.LogInformation("[SYNC] Schema PedWebCab: {schema}", schemaCab ?? "<no existe PedWebCab>");
-                    _logger?.LogInformation("[SYNC] Schema PedWebArt: {schema}", schemaArt ?? "<no existe PedWebArt>");
+                    result.Message = "No hay nuevos pedidos para sincronizar";
+                    _logger?.LogInformation("[SYNC] {Message}", result.Message);
+                    return result;
                 }
-                catch (Exception exDiag)
-                {
-                    _logger?.LogWarning(exDiag, "[SYNC] Error diagnóstico DB (continuando de todas formas): {msg}", exDiag.Message);
-                }
+
+                _logger?.LogInformation("[SYNC] Se sincronizarán {count} pedidos nuevos", pedidosNuevos.Count);
 
                 using var transaction = _conn.BeginTransaction();
 
                 try
                 {
-                    // Upsert para PedWebCab
-                    const string upsertCabecera = @"
-INSERT INTO PedWebCab (
+                    const string insertCabecera = @"
+INSERT OR IGNORE INTO PedWebCab (
     codtipcbt, cemcbt, nrocbt, csid, feccbt, fecentcbt, codcli, codiva, codsuc, codlist, codclabon,
     codven, codtra, codconvta, codmon, impcot, impgracbt, pordescbt, impdescbt, porreccbt, impreccbt,
     impnetgracbt, impivacbt, imptotcbt, obscbt, autped, usringreso, fecingreso, usraut, fecaut,
-    nrobocent, pedwebinc, obscomunicado, fecpedwebinc, AutPedSec, UsrAutSec, FecAutSec
+    nrobocent, pedwebinc, obscomunicado, fecpedwebinc, AutPedSec, UsrAutSec, FecAutSec, Confirmado,
+    Estado, OrigenPedido
 ) VALUES (
     @CodTipCbt, @CemCbt, @NroCbt, @Csid, @FecCbt, @FecEntCbt, @CodCli, @CodIva, @CodSuc, @CodList, @CodClaBon,
     @CodVen, @CodTra, @CodConVta, @CodMon, @ImpCot, @ImpGraCbt, @PorDesCbt, @ImpDesCbt, @PorRecCbt, @ImpRecCbt,
     @ImpNetGraCbt, @ImpIvaCbt, @ImpTotCbt, @ObsCbt, @AutPed, @UsrIngreso, @FecIngreso, @UsrAut, @FecAut,
-    @NroBocEnt, @PedWebInc, @ObsComunicado, @FecPedWebInc, @AutPedSec, @UsrAutSec, @FecAutSec
-)
-ON CONFLICT(csid) DO UPDATE SET
-    codtipcbt = excluded.codtipcbt,
-    cemcbt = excluded.cemcbt,
-    nrocbt = excluded.nrocbt,
-    feccbt = excluded.feccbt,
-    fecentcbt = excluded.fecentcbt,
-    codcli = excluded.codcli,
-    codiva = excluded.codiva,
-    codsuc = excluded.codsuc,
-    codlist = excluded.codlist,
-    codclabon = excluded.codclabon,
-    codven = excluded.codven,
-    codtra = excluded.codtra,
-    codconvta = excluded.codconvta,
-    codmon = excluded.codmon,
-    impcot = excluded.impcot,
-    impgracbt = excluded.impgracbt,
-    pordescbt = excluded.pordescbt,
-    impdescbt = excluded.impdescbt,
-    porreccbt = excluded.porreccbt,
-    impreccbt = excluded.impreccbt,
-    impnetgracbt = excluded.impnetgracbt,
-    impivacbt = excluded.impivacbt,
-    imptotcbt = excluded.imptotcbt,
-    obscbt = excluded.obscbt,
-    autped = excluded.autped,
-    usringreso = excluded.usringreso,
-    fecingreso = excluded.fecingreso,
-    usraut = excluded.usraut,
-    fecaut = excluded.fecaut,
-    nrobocent = excluded.nrobocent,
-    pedwebinc = excluded.pedwebinc,
-    obscomunicado = excluded.obscomunicado,
-    fecpedwebinc = excluded.fecpedwebinc,
-    AutPedSec = excluded.AutPedSec,
-    UsrAutSec = excluded.UsrAutSec,
-    FecAutSec = excluded.FecAutSec;";
+    @NroBocEnt, @PedWebInc, @ObsComunicado, @FecPedWebInc, @AutPedSec, @UsrAutSec, @FecAutSec, @Confirmado,
+    @Estado, @OrigenPedido
+);";
 
-                    // Upsert para PedWebArt
-                    const string upsertDetalle = @"
-INSERT INTO PedWebArt (
+                    const string insertDetalle = @"
+INSERT OR IGNORE INTO PedWebArt (
     csid, secuencia, codart, codivaart, codclabon, desartamp, fecentart, canart, preart,
     impbonart, impgraart, impdesart, imprecart, impnetgraart, impivaart
 ) VALUES (
     @Csid, @Secuencia, @CodArt, @CodIvaArt, @CodClaBon, @DesArtAmp, @FecEntArt, @CanArt, @PreArt,
-    @ImpBonArt, @ImpGraArt, @ImpDesArt, @ImpPrecArt, @ImpNetGraArt, @ImpIvaArt
-)
-ON CONFLICT(csid, secuencia) DO UPDATE SET
-    codart = excluded.codart,
-    codivaart = excluded.codivaart,
-    codclabon = excluded.codclabon,
-    desartamp = excluded.desartamp,
-    fecentart = excluded.fecentart,
-    canart = excluded.canart,
-    preart = excluded.preart,
-    impbonart = excluded.impbonart,
-    impgraart = excluded.impgraart,
-    impdesart = excluded.impdesart,
-    imprecart = excluded.imprecart,
-    impnetgraart = excluded.impnetgraart,
-    impivaart = excluded.impivaart;";
+    @ImpBonArt, @ImpGraArt, @ImpDesArt, @ImpRecArt, @ImpNetGraArt, @ImpIvaArt
+);";
 
                     int countCabeceras = 0;
                     int countDetalles = 0;
 
-                    foreach (var pedido in lista)
+                    foreach (var pedido in pedidosNuevos)
                     {
                         ct.ThrowIfCancellationRequested();
 
                         var pCab = new
                         {
-                            CodTipCbt = pedido.CodTipCbt,
-                            CemCbt = pedido.CemCbt,
-                            NroCbt = pedido.NroCbt,
-                            Csid = pedido.Csid,
-                            FecCbt = pedido.FecCbt,
-                            FecEntCbt = pedido.FecEntCbt,
-                            CodCli = pedido.CodCli,
-                            CodIva = pedido.CodIva,
-                            CodSuc = pedido.CodSuc,
-                            CodList = pedido.CodList,
-                            CodClaBon = pedido.CodClaBon,
-                            CodVen = pedido.CodVen,
-                            CodTra = pedido.CodTra,
-                            CodConVta = pedido.CodConVta,
-                            CodMon = pedido.CodMon,
-                            ImpCot = pedido.ImpCot,
-                            ImpGraCbt = pedido.ImpGraCbt,
-                            PorDesCbt = pedido.PorDesCbt,
-                            ImpDesCbt = pedido.ImpDesCbt,
-                            PorRecCbt = pedido.PorRecCbt,
-                            ImpRecCbt = pedido.ImpRecCbt,
-                            ImpNetGraCbt = pedido.ImpNetGraCbt,
-                            ImpIvaCbt = pedido.ImpIvaCbt,
-                            ImpTotCbt = pedido.ImpTotCbt,
-                            ObsCbt = pedido.ObsCbt,
-                            AutPed = pedido.AutPed,
-                            UsrIngreso = pedido.UsrIngreso,
-                            FecIngreso = pedido.FecIngreso,
-                            UsrAut = pedido.UsrAut,
-                            FecAut = pedido.FecAut,
-                            NroBocEnt = pedido.NroBocEnt,
-                            PedWebInc = pedido.PedWebInc,
-                            ObsComunicado = pedido.ObsComunicado,
-                            FecPedWebInc = pedido.FecPedWebInc,
-                            AutPedSec = pedido.AutPedSec,
-                            UsrAutSec = pedido.UsrAutSec,
-                            FecAutSec = pedido.FecAutSec
+                            pedido.CodTipCbt,
+                            pedido.CemCbt,
+                            pedido.NroCbt,
+                            pedido.Csid,
+                            pedido.FecCbt,
+                            pedido.FecEntCbt,
+                            pedido.CodCli,
+                            pedido.CodIva,
+                            pedido.CodSuc,
+                            pedido.CodList,
+                            pedido.CodClaBon,
+                            pedido.CodVen,
+                            pedido.CodTra,
+                            pedido.CodConVta,
+                            pedido.CodMon,
+                            pedido.ImpCot,
+                            pedido.ImpGraCbt,
+                            pedido.PorDesCbt,
+                            pedido.ImpDesCbt,
+                            pedido.PorRecCbt,
+                            pedido.ImpRecCbt,
+                            pedido.ImpNetGraCbt,
+                            pedido.ImpIvaCbt,
+                            pedido.ImpTotCbt,
+                            pedido.ObsCbt,
+                            pedido.AutPed,
+                            UsrIngreso = "sync",
+                            FecIngreso = DateTime.UtcNow,
+                            pedido.UsrAut,
+                            pedido.FecAut,
+                            pedido.NroBocEnt,
+                            pedido.PedWebInc,
+                            pedido.ObsComunicado,
+                            pedido.FecPedWebInc,
+                            pedido.AutPedSec,
+                            pedido.UsrAutSec,
+                            pedido.FecAutSec,
+                            pedido.Confirmado,
+                            Estado = "Sincronizado",      // Viene del servidor, ya está sincronizado
+                            OrigenPedido = "Servidor"     // MARCA IMPORTANTE
                         };
 
-                        await _conn.ExecuteAsync(upsertCabecera, pCab, transaction: transaction);
+                        await _conn.ExecuteAsync(insertCabecera, pCab, transaction: transaction);
                         countCabeceras++;
 
                         if (pedido.Detalles != null && pedido.Detalles.Any())
@@ -434,24 +392,24 @@ ON CONFLICT(csid, secuencia) DO UPDATE SET
                             {
                                 var pDet = new
                                 {
-                                    Csid = det.Csid,
-                                    Secuencia = det.Secuencia,
-                                    CodArt = det.CodArt,
-                                    CodIvaArt = det.CodIvaArt,
-                                    CodClaBon = det.CodClaBon,
-                                    DesArtAmp = det.DesArtAmp,
-                                    FecEntArt = det.FecEntArt,
-                                    CanArt = det.CanArt,
-                                    PreArt = det.PreArt,
-                                    ImpBonArt = det.ImpBonArt,
-                                    ImpGraArt = det.ImpGraArt,
-                                    ImpDesArt = det.ImpDesArt,
-                                    ImpPrecArt = det.ImpPrecArt,
-                                    ImpNetGraArt = det.ImpNetGraArt,
-                                    ImpIvaArt = det.ImpIvaArt
+                                    det.Csid,
+                                    det.Secuencia,
+                                    det.CodArt,
+                                    det.CodIvaArt,
+                                    det.CodClaBon,
+                                    det.DesArtAmp,
+                                    det.FecEntArt,
+                                    det.CanArt,
+                                    det.PreArt,
+                                    det.ImpBonArt,
+                                    det.ImpGraArt,
+                                    det.ImpDesArt,
+                                    det.ImpRecArt,
+                                    det.ImpNetGraArt,
+                                    det.ImpIvaArt
                                 };
 
-                                await _conn.ExecuteAsync(upsertDetalle, pDet, transaction: transaction);
+                                await _conn.ExecuteAsync(insertDetalle, pDet, transaction: transaction);
                                 countDetalles++;
                             }
                         }
@@ -459,9 +417,384 @@ ON CONFLICT(csid, secuencia) DO UPDATE SET
 
                     transaction.Commit();
 
-                    result.InsertedOrUpdatedArtic = countCabeceras;    // reutilizando propiedades de SyncResult
+                    result.InsertedOrUpdatedArtic = countCabeceras;
                     result.InsertedOrUpdatedPreVen = countDetalles;
-                    result.Message = $"Sincronización completada. Cabeceras: {countCabeceras}, Detalles: {countDetalles}";
+                    result.Message = $"Sincronización completada. Cabeceras nuevas: {countCabeceras}, Detalles: {countDetalles}";
+                    _logger?.LogInformation("[SYNC] {Message}", result.Message);
+                }
+                catch (Exception exTx)
+                {
+                    try { transaction.Rollback(); } catch { }
+                    _logger?.LogError(exTx, "[SYNC] Error dentro de la transacción, rollback ejecutado.");
+                    result.Failed = pedidosNuevos.Count;
+                    result.Message = $"Error al insertar en SQLite: {exTx.Message}";
+                }
+
+                return result;
+            }
+            finally
+            {
+                try
+                {
+                    if (_conn.State == ConnectionState.Open)
+                        await _conn.CloseAsync();
+                }
+                catch { }
+
+                System.Threading.Monitor.Exit(_syncLock);
+            }
+        }
+    }
+
+
+
+
+
+
+    
+
+    public class BocEntSyncService
+    {
+        private readonly BocEntApiService _apiService;
+        private readonly SqliteConnection _conn;
+        private readonly ILogger<BocEntSyncService> _logger;
+        private readonly object _syncLock = new();
+
+        public BocEntSyncService(
+            BocEntApiService apiService,
+            SqliteConnection conn,
+            ILogger<BocEntSyncService> logger)
+        {
+            _apiService = apiService ?? throw new ArgumentNullException(nameof(apiService));
+            _conn = conn ?? throw new ArgumentNullException(nameof(conn));
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// Sincroniza BocEnt desde la API hacia SQLite.
+        /// </summary>
+        public async Task<SyncResult> SyncAsync(CancellationToken ct = default)
+        {
+            if (!System.Threading.Monitor.TryEnter(_syncLock))
+            {
+                return new SyncResult { Message = "Sincronización de bocas de entrega ya en curso" };
+            }
+
+            try
+            {
+                _logger?.LogInformation("[SYNC] Iniciando sincronización de bocas de entrega...");
+
+                var result = new SyncResult();
+
+                // 1. Obtener todas las bocas desde la API
+                IEnumerable<BocaEntregaDTO> listado;
+                try
+                {
+                    listado = await _apiService.GetAll();
+                }
+                catch (Exception ex)
+                {
+                    _logger?.LogError(ex, "[SYNC] Error al obtener bocas desde API");
+                    return new SyncResult { Message = $"Error al obtener bocas: {ex.Message}" };
+                }
+
+                var lista = listado?.ToList() ?? new List<BocaEntregaDTO>();
+                result.TotalFetched = lista.Count;
+
+                if (!lista.Any())
+                {
+                    result.Message = "No se encontraron bocas de entrega en la API";
+                    return result;
+                }
+
+                // 2. Abrir conexión SQLite
+                if (_conn.State != ConnectionState.Open)
+                    await _conn.OpenAsync(ct);
+
+                using var transaction = _conn.BeginTransaction();
+
+                try
+                {
+                    // 3. Limpiar tabla antes de insertar (estrategia: reemplazar todo)
+                    await _conn.ExecuteAsync("DELETE FROM BocEnt;", transaction: transaction);
+                    _logger?.LogInformation("[SYNC] Tabla BocEnt limpiada");
+
+                    // 4. Insertar todas las bocas
+                    const string insertBoca = @"
+                    INSERT INTO BocEnt (codcli, nrobocent, nombocent, dombocent)
+                    VALUES (@CodCli, @NroBocEnt, @NomBocEnt, @DomBocEnt);";
+
+                    int count = 0;
+
+                    foreach (var boca in lista)
+                    {
+                        ct.ThrowIfCancellationRequested();
+
+                        var pBoca = new
+                        {
+                            boca.CodCli,
+                            boca.NroBocEnt,
+                            boca.NomBocEnt,
+                            boca.DomBocEnt
+                        };
+
+                        await _conn.ExecuteAsync(insertBoca, pBoca, transaction: transaction);
+                        count++;
+                    }
+
+                    transaction.Commit();
+
+                    result.InsertedOrUpdatedArtic = count; // reutilizamos el campo
+                    result.Message = $"Sincronización completada. Bocas procesadas: {count}";
+                    _logger?.LogInformation("[SYNC] {Message}", result.Message);
+                }
+                catch (Exception exTx)
+                {
+                    try { transaction.Rollback(); } catch { }
+                    _logger?.LogError(exTx, "[SYNC] Error dentro de la transacción, rollback ejecutado.");
+                    result.Failed = lista.Count;
+                    result.Message = $"Error al insertar en SQLite: {exTx.Message}";
+                }
+
+                return result;
+            }
+            finally
+            {
+                try
+                {
+                    if (_conn.State == ConnectionState.Open)
+                        await _conn.CloseAsync();
+                }
+                catch { }
+
+                System.Threading.Monitor.Exit(_syncLock);
+            }
+        }
+    }
+
+    public class BonArtCliSyncService
+    {
+        private readonly BonArtCliApiService _apiService;
+        private readonly SqliteConnection _conn;
+        private readonly ILogger<BonArtCliSyncService> _logger;
+        private readonly object _syncLock = new();
+
+        public BonArtCliSyncService(
+            BonArtCliApiService apiService,
+            SqliteConnection conn,
+            ILogger<BonArtCliSyncService> logger)
+        {
+            _apiService = apiService ?? throw new ArgumentNullException(nameof(apiService));
+            _conn = conn ?? throw new ArgumentNullException(nameof(conn));
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// Sincroniza BonArtCli desde la API hacia SQLite.
+        /// </summary>
+        public async Task<SyncResult> SyncAsync(CancellationToken ct = default)
+        {
+            if (!System.Threading.Monitor.TryEnter(_syncLock))
+            {
+                return new SyncResult { Message = "Sincronización de BonArtCli ya en curso" };
+            }
+
+            try
+            {
+                _logger?.LogInformation("[SYNC] Iniciando sincronización de BonArtCli...");
+
+                var result = new SyncResult();
+
+                // 1. Obtener todas las asignaciones desde la API
+                IEnumerable<BonArtCliDTO> listado;
+                try
+                {
+                    listado = await _apiService.GetAll();
+                }
+                catch (Exception ex)
+                {
+                    _logger?.LogError(ex, "[SYNC] Error al obtener BonArtCli desde API");
+                    return new SyncResult { Message = $"Error al obtener BonArtCli: {ex.Message}" };
+                }
+
+                var lista = listado?.ToList() ?? new List<BonArtCliDTO>();
+                result.TotalFetched = lista.Count;
+
+                if (!lista.Any())
+                {
+                    result.Message = "No se encontraron asignaciones de bonificaciones en la API";
+                    return result;
+                }
+
+                // 2. Abrir conexión SQLite
+                if (_conn.State != ConnectionState.Open)
+                    await _conn.OpenAsync(ct);
+
+                using var transaction = _conn.BeginTransaction();
+
+                try
+                {
+                    // 3. Limpiar tabla antes de insertar (estrategia: reemplazar todo)
+                    await _conn.ExecuteAsync("DELETE FROM BonArtCli;", transaction: transaction);
+                    _logger?.LogInformation("[SYNC] Tabla BonArtCli limpiada");
+
+                    // 4. Insertar todas las asignaciones
+                    const string insertBonArtCli = @"
+                    INSERT INTO BonArtCli (CodCli, CodArt, CodClaBon, inactivo)
+                    VALUES (@CodCli, @CodArt, @CodClaBon, @Inactivo);";
+
+                    int count = 0;
+
+                    foreach (var bon in lista)
+                    {
+                        ct.ThrowIfCancellationRequested();
+
+                        var pBon = new
+                        {
+                            bon.CodCli,
+                            bon.CodArt,
+                            bon.CodClaBon,
+                            Inactivo = bon.Inactivo ? 1 : 0 // SQLite usa 0/1 para boolean
+                        };
+
+                        await _conn.ExecuteAsync(insertBonArtCli, pBon, transaction: transaction);
+                        count++;
+                    }
+
+                    transaction.Commit();
+
+                    result.InsertedOrUpdatedArtic = count;
+                    result.Message = $"Sincronización completada. BonArtCli procesados: {count}";
+                    _logger?.LogInformation("[SYNC] {Message}", result.Message);
+                }
+                catch (Exception exTx)
+                {
+                    try { transaction.Rollback(); } catch { }
+                    _logger?.LogError(exTx, "[SYNC] Error dentro de la transacción, rollback ejecutado.");
+                    result.Failed = lista.Count;
+                    result.Message = $"Error al insertar en SQLite: {exTx.Message}";
+                }
+
+                return result;
+            }
+            finally
+            {
+                try
+                {
+                    if (_conn.State == ConnectionState.Open)
+                        await _conn.CloseAsync();
+                }
+                catch { }
+
+                System.Threading.Monitor.Exit(_syncLock);
+            }
+        }
+    }
+
+
+
+    public class BonClaDetSyncService
+    {
+        private readonly BonClaDetApiService _apiService;
+        private readonly SqliteConnection _conn;
+        private readonly ILogger<BonClaDetSyncService> _logger;
+        private readonly object _syncLock = new();
+
+        public BonClaDetSyncService(
+            BonClaDetApiService apiService,
+            SqliteConnection conn,
+            ILogger<BonClaDetSyncService> logger)
+        {
+            _apiService = apiService ?? throw new ArgumentNullException(nameof(apiService));
+            _conn = conn ?? throw new ArgumentNullException(nameof(conn));
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// Sincroniza BonClaDet desde la API hacia SQLite.
+        /// </summary>
+        public async Task<SyncResult> SyncAsync(CancellationToken ct = default)
+        {
+            if (!System.Threading.Monitor.TryEnter(_syncLock))
+            {
+                return new SyncResult { Message = "Sincronización de BonClaDet ya en curso" };
+            }
+
+            try
+            {
+                _logger?.LogInformation("[SYNC] Iniciando sincronización de BonClaDet...");
+
+                var result = new SyncResult();
+
+                // 1. Obtener todos los detalles desde la API
+                IEnumerable<BonClaDetDTO> listado;
+                try
+                {
+                    listado = await _apiService.GetAll();
+                }
+                catch (Exception ex)
+                {
+                    _logger?.LogError(ex, "[SYNC] Error al obtener BonClaDet desde API");
+                    return new SyncResult { Message = $"Error al obtener BonClaDet: {ex.Message}" };
+                }
+
+                var lista = listado?.ToList() ?? new List<BonClaDetDTO>();
+                result.TotalFetched = lista.Count;
+
+                if (!lista.Any())
+                {
+                    result.Message = "No se encontraron detalles de bonificaciones en la API";
+                    return result;
+                }
+
+                // 2. Abrir conexión SQLite
+                if (_conn.State != ConnectionState.Open)
+                    await _conn.OpenAsync(ct);
+
+                using var transaction = _conn.BeginTransaction();
+
+                try
+                {
+                    // 3. Limpiar tabla antes de insertar (estrategia: reemplazar todo)
+                    await _conn.ExecuteAsync("DELETE FROM BonClaDet;", transaction: transaction);
+                    _logger?.LogInformation("[SYNC] Tabla BonClaDet limpiada");
+
+                    // 4. Insertar todos los detalles
+                    const string insertBonClaDet = @"
+                    INSERT INTO BonClaDet (
+                        CodClaBon, Secuencia, TipEsc, ValEscDes, ValEscHas, 
+                        PorBonImp, PorBonCan, disfac
+                    ) VALUES (
+                        @CodClaBon, @Secuencia, @TipEsc, @ValEscDes, @ValEscHas, 
+                        @PorBonImp, @PorBonCan, @DisFac
+                    );";
+
+                    int count = 0;
+
+                    foreach (var det in lista)
+                    {
+                        ct.ThrowIfCancellationRequested();
+
+                        var pDet = new
+                        {
+                            det.CodClaBon,
+                            det.Secuencia,
+                            det.TipEsc,
+                            det.ValEscDes,
+                            det.ValEscHas,
+                            det.PorBonImp,
+                            det.PorBonCan,
+                            det.DisFac
+                        };
+
+                        await _conn.ExecuteAsync(insertBonClaDet, pDet, transaction: transaction);
+                        count++;
+                    }
+
+                    transaction.Commit();
+
+                    result.InsertedOrUpdatedPreVen = count;
+                    result.Message = $"Sincronización completada. BonClaDet procesados: {count}";
                     _logger?.LogInformation("[SYNC] {Message}", result.Message);
                 }
                 catch (Exception exTx)

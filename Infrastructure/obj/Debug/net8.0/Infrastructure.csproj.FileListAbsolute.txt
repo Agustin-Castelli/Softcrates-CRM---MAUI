@@ -8,6 +8,7 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll

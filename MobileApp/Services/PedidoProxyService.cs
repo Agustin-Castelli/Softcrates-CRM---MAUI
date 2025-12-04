@@ -89,7 +89,26 @@ namespace MobileApp.Services
 
         public async Task<IEnumerable<PedidoDTO>> GetAllPedidos()
         {
-            return null;
+            if (_connectivity.IsConnected())
+            {
+                try
+                {
+                    System.Diagnostics.Debug.WriteLine("[PROXY] HISTORIALPEDIDOS: Intentando con API Service");
+                    return await _apiService.GetAllPedidos();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"[PROXY] HISTORIALPEDIDOS: Error en API Service: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine("[PROXY] HISTORIALPEDIDOS: Fallback a Local Service");
+                }
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("[PROXY] HISTORIALPEDIDOS: Sin conexión a internet");
+            }
+
+            System.Diagnostics.Debug.WriteLine("[PROXY] HISTORIALPEDIDOS: Usando Local Service");
+            return await _localService.GetAllPedidos();
         }
     }
 }

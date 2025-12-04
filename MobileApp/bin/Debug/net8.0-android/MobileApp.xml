@@ -19,6 +19,21 @@
             Sincroniza PedWebCab y PedWebArt desde la API hacia SQLite.
             </summary>
         </member>
+        <member name="M:MobileApp.Services.BocEntSyncService.SyncAsync(System.Threading.CancellationToken)">
+            <summary>
+            Sincroniza BocEnt desde la API hacia SQLite.
+            </summary>
+        </member>
+        <member name="M:MobileApp.Services.BonArtCliSyncService.SyncAsync(System.Threading.CancellationToken)">
+            <summary>
+            Sincroniza BonArtCli desde la API hacia SQLite.
+            </summary>
+        </member>
+        <member name="M:MobileApp.Services.BonClaDetSyncService.SyncAsync(System.Threading.CancellationToken)">
+            <summary>
+            Sincroniza BonClaDet desde la API hacia SQLite.
+            </summary>
+        </member>
         <member name="T:MobileApp.Services.UserLocalService">
             <summary>
             Login offline contra la tabla local `sisusuar` (SQLite).

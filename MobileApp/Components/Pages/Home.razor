@@ -5,7 +5,6 @@
 @inject IClientService ClientService
 @inject NavigationManager Navigation
 @inject ClientStateService ClientState
-@inject SyncManager SyncManager
 @inject CrearPedidoSyncService CrearPedidoSyncService
 
 <div class="home-wrap">
@@ -216,33 +215,33 @@
             _ => "neutral"
         };
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            // 🚀 Acá llamás a la sincronización de artículos y pedidos
-            await SyncManager.RunAllAsync();
-            System.Diagnostics.Debug.WriteLine("✅ Sincronización completa");
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     try
+    //     {
+    //         // 🚀 Acá llamás a la sincronización de artículos y pedidos
+    //         //await SyncManager.RunAllAsync();
+    //         System.Diagnostics.Debug.WriteLine("✅ Sincronización completa");
 
-            // 🚀 Ahora mandamos pedidos pendientes
-            // 🚀 correr la sync de pedidos en segundo plano
-            _ = Task.Run(async () =>
-            {
-                try
-                {
-                    await CrearPedidoSyncService.SyncPedidosPendientesAsync();
-                    System.Diagnostics.Debug.WriteLine("✅ Sincronización de pedidos pendientes completa");
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Error sincronizando pedidos pendientes: {ex.Message}");
-                }
-            });
-        }
-        catch (Exception ex)
-        {
-            System.Diagnostics.Debug.WriteLine($"Error en la sincronización: {ex.Message}");
-            // si querés, podrías mostrar un cartelito amigable en la UI
-        }
-    }
+    //         // 🚀 Ahora mandamos pedidos pendientes
+    //         // 🚀 correr la sync de pedidos en segundo plano
+    //         _ = Task.Run(async () =>
+    //         {
+    //             try
+    //             {
+    //                 await CrearPedidoSyncService.SyncPedidosPendientesAsync();
+    //                 System.Diagnostics.Debug.WriteLine("✅ Sincronización de pedidos pendientes completa");
+    //             }
+    //             catch (Exception ex)
+    //             {
+    //                 System.Diagnostics.Debug.WriteLine($"Error sincronizando pedidos pendientes: {ex.Message}");
+    //             }
+    //         });
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         System.Diagnostics.Debug.WriteLine($"Error en la sincronización: {ex.Message}");
+    //         // si querés, podrías mostrar un cartelito amigable en la UI
+    //     }
+    // }
 }

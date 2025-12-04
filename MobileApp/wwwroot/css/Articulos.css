@@ -275,3 +275,28 @@
     font-size: 0.9rem;
     color: #666;
 }
+
+/* Contenedor de precio y bonificación */
+.precio-bonificacion-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.li-amount {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Badge de bonificación */
+.bonificacion-badge {
+    background-color: #28a745;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}

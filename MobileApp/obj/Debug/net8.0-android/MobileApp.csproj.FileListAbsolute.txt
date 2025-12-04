@@ -8,6 +8,10 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\com.companyname.mobileapp-Signed.apk.idsig
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Core.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Infrastructure.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\UI.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Core.pdb
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Infrastructure.pdb
@@ -138,6 +142,7 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\MobileApp.AssemblyInfoInputs.cache
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\MobileApp.AssemblyInfo.cs
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\MobileApp.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\MobileApp.sourcelink.json
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\XamlC.stamp
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\MobileApp.csproj.Up2Date
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\MobileApp.dll
@@ -233,6 +238,7 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.JSInterop.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.Compatibility.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.pdb
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.Xaml.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.Xaml.pdb
@@ -246,6 +252,9 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.SqlServer.Server.pdb
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualBasic.Core.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualBasic.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Win32.Primitives.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Win32.Registry.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\MobileApp.dll
@@ -606,6 +615,7 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\zh-Hant\Microsoft.Maui.Controls.resources.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\zh-HK\Microsoft.Maui.Controls.resources.dll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\_Microsoft.Android.Resource.Designer.dll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.ll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\AndroidManifest.xml
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\AndroidManifest.xml
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\src\mono\MonoRuntimeProvider.java
@@ -615,6 +625,7 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\static.flag
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\__environment__.txt
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\buildid.txt
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\environment.arm64-v8a.ll
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\src\androidx\activity\ktx\R.java
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\src\androidx\activity\R.java
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\src\androidx\annotation\experimental\R.java
@@ -1122,6 +1133,13 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\bin\packaged_resources
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\src\com\companyname\mobileapp\R.java
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\_CompileJava.FileList.txt
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.ll
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.o
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\environment.arm64-v8a.o
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.o
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\marshal_methods.arm64-v8a.o
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\jni_remap.arm64-v8a.o
+C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\bin\classes.dex
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\bin\classes2.dex
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\stamp\_CleanIntermediateIfNeeded.stamp
@@ -1132,20 +1150,3 @@ C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.ll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\environment.arm64-v8a.ll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.ll
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.o
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\environment.arm64-v8a.o
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.o
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\marshal_methods.arm64-v8a.o
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\android\jni_remap.arm64-v8a.o
-C:\Users\Agustin\source\repos\CaferLitoral-CRM-Frontend\MobileApp\obj\Debug\net8.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so

@@ -5,7 +5,8 @@ using Microsoft.Extensions.Logging;
 using MobileApp.Services;
 using Microsoft.Data.Sqlite;
 using MobileApp.Data;
-
+using SQLitePCL;
+using Infrastructure.Local;
 
 namespace MobileApp;
 
@@ -13,6 +14,8 @@ public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
+        SQLitePCL.Batteries_V2.Init();
+
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
@@ -42,8 +45,52 @@ public static class MauiProgram
             throw;
         }
 
-        builder.Services.AddScoped<SqliteConnection>(_ =>
-            new SqliteConnection($"Data Source={dbPath}"));
+        // Configuracion de SQLite con AddScoped y sin WAL
+        //builder.Services.AddScoped<SqliteConnection>(_ =>
+        //    new SqliteConnection($"Data Source={dbPath}"));
+
+        // 🔥 CAMBIAR A SINGLETON Y CONFIGURAR WAL
+        builder.Services.AddSingleton<SqliteConnection>(sp =>
+        {
+            var connString = $"Data Source={dbPath}";
+            var conn = new SqliteConnection(connString);
+
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("[MAUI] Configurando SQLite...");
+
+                // Abrir conexión temporalmente para configurar
+                conn.Open();
+
+                // 🔥 Habilitar WAL mode (permite múltiples lecturas simultáneas)
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "PRAGMA journal_mode=WAL;";
+                    var result = cmd.ExecuteScalar();
+                    System.Diagnostics.Debug.WriteLine($"[MAUI] Journal mode configurado: {result}");
+                }
+
+                // 🔥 Aumentar timeout para evitar locks
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "PRAGMA busy_timeout=5000;"; // 5 segundos
+                    cmd.ExecuteNonQuery();
+                    System.Diagnostics.Debug.WriteLine("[MAUI] Busy timeout configurado: 5000ms");
+                }
+
+                // 🔥 Cerrar la conexión de configuración
+                conn.Close();
+
+                System.Diagnostics.Debug.WriteLine("[MAUI] ✅ SQLite configurado correctamente");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"[MAUI] ❌ Error configurando SQLite: {ex.Message}");
+                throw;
+            }
+
+            return conn;
+        });
 
 
         // Configurar HttpClient por nombre             ------------------------>       URL PRUEBAS LOCAL: http://localhost:5109/api/ 
@@ -56,6 +103,8 @@ public static class MauiProgram
         // Registrar servicios
         builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
         builder.Services.AddSingleton<IConnectivityService, ConnectivityService>();
+        builder.Services.AddSingleton<INetworkService, NetworkService>();   // Clase para corroborar conexión del teléfono a Wi-Fi o Datos Móviles.
+        builder.Services.AddSingleton<IDialogService, DialogService>();    // Va de la mano con NetworkService, se utiliza para renderizar el cartel de aviso en vez de utilizar JSRuntime.
         builder.Services.AddSingleton<IAuthState, AuthState>();
         builder.Services.AddSingleton<SyncManager>();
         builder.Services.AddSingleton<ClientStateService>(); // Clase para guardar y enviar data del cliente seleccionado en Home.razor a otros componentes
@@ -63,6 +112,9 @@ public static class MauiProgram
         builder.Services.AddScoped<ArticuloSyncService>();
         builder.Services.AddScoped<PedidoSyncService>();
         builder.Services.AddScoped<CrearPedidoSyncService>();
+        builder.Services.AddScoped<BocEntSyncService>();
+        builder.Services.AddScoped<BonArtCliSyncService>();
+        builder.Services.AddScoped<BonClaDetSyncService>();
 
         // Registrar las interfaces con factory
         builder.Services.AddScoped<UserApiService>(provider =>
@@ -97,7 +149,36 @@ public static class MauiProgram
         {
             var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
             var httpClient = httpClientFactory.CreateClient("ApiClient");
-            return new CrearPedidoApiService(httpClient);
+            var conn = provider.GetRequiredService<SqliteConnection>(); // 🔥 AGREGAR ESTA LÍNEA
+            return new CrearPedidoApiService(httpClient, conn); // 🔥 PASAR conn
+        });
+
+        builder.Services.AddScoped<BocEntApiService>(provider =>
+        {
+            var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
+            var httpClient = httpClientFactory.CreateClient("ApiClient");
+            return new BocEntApiService(httpClient);
+        });
+
+        builder.Services.AddScoped<BonificacionApiService>(provider =>
+        {
+            var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
+            var httpClient = httpClientFactory.CreateClient("ApiClient");
+            return new BonificacionApiService(httpClient);
+        });
+
+        builder.Services.AddScoped<BonArtCliApiService>(provider =>
+        {
+            var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
+            var httpClient = httpClientFactory.CreateClient("ApiClient");
+            return new BonArtCliApiService(httpClient);
+        });
+
+        builder.Services.AddScoped<BonClaDetApiService>(provider =>
+        {
+            var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
+            var httpClient = httpClientFactory.CreateClient("ApiClient");
+            return new BonClaDetApiService(httpClient);
         });
 
         // === Servicios Local (SQLite) ===
@@ -106,6 +187,8 @@ public static class MauiProgram
         builder.Services.AddScoped<ArticuloLocalService>();
         builder.Services.AddScoped<PedidoLocalService>();
         builder.Services.AddScoped<CrearPedidoLocalService>();
+        builder.Services.AddScoped<BocEntLocalService>();
+        builder.Services.AddScoped<BonificacionLocalService>();
 
         // === Proxy (lo que la UI realmente inyecta) ===
         builder.Services.AddScoped<IUserService, UserProxyService>();
@@ -113,6 +196,8 @@ public static class MauiProgram
         builder.Services.AddScoped<IArticuloService, ArticuloProxyService>();
         builder.Services.AddScoped<IPedidoService, PedidoProxyService>();
         builder.Services.AddScoped<ICrearPedidoService, CrearPedidoProxyService>();
+        builder.Services.AddScoped<IBocEntService, BocEntProxyService>();
+        builder.Services.AddScoped<IBonificacionService, BonificacionProxyService>();
 
 #if DEBUG
         builder.Services.AddBlazorWebViewDeveloperTools();

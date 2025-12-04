@@ -47,6 +47,7 @@ namespace Core.DTOs
             public string AutPedSec { get; set; } = string.Empty;
             public string UsrAutSec { get; set; } = string.Empty;
             public DateTime FecAutSec { get; set; }
+            public int Confirmado { get; set; }
 
             public List<PedidoDetalleDTO> Detalles { get; set; } = new();
         }
@@ -65,7 +66,7 @@ namespace Core.DTOs
             public decimal ImpBonArt { get; set; }
             public decimal ImpGraArt { get; set; }
             public decimal ImpDesArt { get; set; }
-            public decimal ImpPrecArt { get; set; }
+            public decimal ImpRecArt { get; set; }
             public decimal ImpNetGraArt { get; set; }
             public decimal ImpIvaArt { get; set; }
         }

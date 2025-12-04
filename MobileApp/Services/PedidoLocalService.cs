@@ -60,7 +60,8 @@ SELECT
     fecpedwebinc AS FecPedWebInc,
     autpedsec   AS AutPedSec,
     usrautsec   AS UsrAutSec,
-    fecautsec   AS FecAutSec
+    fecautsec   AS FecAutSec,
+    confirmado  AS Confirmado
 FROM PedWebCab
 WHERE csid = @Csid
 ", new { Csid = codigo });
@@ -147,7 +148,8 @@ ORDER BY secuencia
                     fecpedwebinc AS FecPedWebInc,
                     autpedsec   AS AutPedSec,
                     usrautsec   AS UsrAutSec,
-                    fecautsec   AS FecAutSec
+                    fecautsec   AS FecAutSec,
+                    confirmado  AS Confirmado
                 FROM PedWebCab
                 WHERE codcli = @CodCli
                 ORDER BY feccbt DESC

@@ -3,52 +3,196 @@
   "WorkspaceRootPath": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\pedidos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\pedidos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\syncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\syncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\pedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\pedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\crearpedidosyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\crearpedidosyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\pedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\pedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\crearpedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\crearpedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\pedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\pedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\syncmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\syncmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\crearpedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\crearpedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\crearpedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\crearpedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\crearpedido.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\crearpedido.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\bonificacionlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\bonificacionlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\bonificacionapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\bonificacionapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\bonificacionproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\bonificacionproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\articulos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\articulos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\cartstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\cartstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\bocentapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\bocentapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\pedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\pedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\connectivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\connectivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\articuloproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\articuloproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\articulolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\articulolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\interfaces\\iarticuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\interfaces\\iarticuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\interfaces\\ibonificacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\interfaces\\ibonificacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\clientproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\clientproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\pedidodetalle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\pedidodetalle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\articulos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\wwwroot\\css\\articulos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\cartstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\cartstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\clientstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\clientstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\pedidos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\pedidos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\bocentproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\bocentproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\crearpedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\crearpedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\pedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\pedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\crearpedidosyncdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\crearpedidosyncdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\pedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\pedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\pedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\pedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\bocentlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\bocentlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\boncladetapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\boncladetapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\bonartcliapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\bonartcliapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\interfaces\\ibocentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\interfaces\\ibocentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\bonificaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\bonificaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\crear-pedido.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\wwwroot\\css\\crear-pedido.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\articulolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\articulolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\articuloapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\articuloapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\syncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\syncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\bocaentregadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\bocaentregadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\syncmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\syncmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\clientdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\clientdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\articulodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\articulodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\networkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\networkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\interfaces\\iarticuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\interfaces\\iarticuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\pedidos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -57,14 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\interfaces\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\interfaces\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\articulos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\wwwroot\\css\\articulos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -83,10 +219,6 @@
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -99,10 +231,6 @@
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -111,72 +239,16 @@
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\pedidodetalle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\pedidodetalle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\crear-pedido.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\wwwroot\\css\\crear-pedido.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\pedidodetalle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\wwwroot\\css\\pedidodetalle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\components\\pages\\crearpedido.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\components\\pages\\crearpedido.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\authstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\authstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\crearpedidosyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\crearpedidosyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\pedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\pedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\crearpedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\crearpedidodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\infrastructure\\api\\crearpedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\crearpedidoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\crearpedidosyncdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\crearpedidosyncdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\crearpedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\crearpedidoproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\crearpedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\crearpedidolocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\interfaces\\icrearpedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,36 +263,16 @@
       "RelativeMoniker": "D:0:0:{AF3874F8-2D7A-4E29-A18F-BD68F12D4592}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\api\\userapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\clientproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\clientproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\userlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\userlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\clientstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\clientstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\userproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\userproxyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\connectivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\connectivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\services\\clientlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|solutionrelative:mobileapp\\services\\clientlocalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\articulodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\articulodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\core\\dtos\\clientdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52664A9B-AE28-4AD9-AAF5-F1613DCF20F8}|Core\\Core.csproj|solutionrelative:core\\dtos\\clientdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE705F0E-0A24-4930-830F-6668DF06C73F}|MobileApp\\MobileApp.csproj|c:\\users\\agustin\\source\\repos\\caferlitoral-crm-frontend\\mobileapp\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -277,8 +329,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 610,
-          "SelectedChildIndex": 10,
+          "DockedHeight": 254,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -286,391 +338,255 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Articulos.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Articulos.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Articulos.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Articulos.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Pages\\Articulos.razor",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIMAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-03T22:25:05.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PedidoProxyService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoProxyService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\PedidoProxyService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoProxyService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\PedidoProxyService.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEgAAABsAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CrearPedidoLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\CrearPedidoLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\CrearPedidoLocalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T21:43:36.546Z",
+              "WhenOpened": "2025-09-29T23:15:40.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PedidoLocalService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoLocalService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\PedidoLocalService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoLocalService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\PedidoLocalService.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAADwv18AAAAJAAAAAAAAAA==",
+              "Title": "CrearPedidoProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\CrearPedidoProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\CrearPedidoProxyService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T20:48:46.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SyncManager.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\SyncManager.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\SyncManager.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\SyncManager.cs",
-              "RelativeToolTip": "MobileApp\\Services\\SyncManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T22:10:44.12Z",
+              "WhenOpened": "2025-09-15T05:08:42.588Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IArticuloService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IArticuloService.cs",
-              "RelativeDocumentMoniker": "Core\\Interfaces\\IArticuloService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IArticuloService.cs",
-              "RelativeToolTip": "Core\\Interfaces\\IArticuloService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T21:34:14.141Z",
-              "EditorCaption": ""
+              "Title": "CrearPedido.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\CrearPedido.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\CrearPedido.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\CrearPedido.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Pages\\CrearPedido.razor",
+              "ViewState": "AgIAADUBAAAAAAAAAAAAAEQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T04:54:55.733Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ArticuloProxyService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloProxyService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\ArticuloProxyService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloProxyService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\ArticuloProxyService.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEkAAABUAAAAAAAAAA==",
+              "Title": "CrearPedidoApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\CrearPedidoApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\CrearPedidoApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\CrearPedidoApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\CrearPedidoApiService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwMYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T21:33:29.254Z",
+              "WhenOpened": "2025-09-15T04:50:59.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Pedidos.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Pedidos.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\Pedidos.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Pedidos.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\Pedidos.css",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-05T12:23:16.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CartStateService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CartStateService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\CartStateService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CartStateService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\CartStateService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CrearPedidoSyncService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoSyncService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\CrearPedidoSyncService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoSyncService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\CrearPedidoSyncService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAjwE0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T05:01:20.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PedidoApiService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\PedidoApiService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Api\\PedidoApiService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\PedidoApiService.cs",
-              "RelativeToolTip": "Infrastructure\\Api\\PedidoApiService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T21:39:43.408Z",
+              "WhenOpened": "2025-10-01T22:11:47.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Pedidos.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Pedidos.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Pedidos.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Pedidos.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Pages\\Pedidos.razor",
-              "ViewState": "AgIAAF0AAAAAAAAAAADwv1wAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-05T03:33:28.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ArticuloApiService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ArticuloApiService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Api\\ArticuloApiService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ArticuloApiService.cs",
-              "RelativeToolTip": "Infrastructure\\Api\\ArticuloApiService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T21:31:36.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ArticuloLocalService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloLocalService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\ArticuloLocalService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloLocalService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\ArticuloLocalService.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAADwvxcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T20:02:10.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "SyncService.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\SyncService.cs",
               "RelativeDocumentMoniker": "MobileApp\\Services\\SyncService.cs",
               "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\SyncService.cs",
               "RelativeToolTip": "MobileApp\\Services\\SyncService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwFAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAH8BAAAAAAAAAAAiwEsBAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T16:44:16.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IPedidoService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IPedidoService.cs",
-              "RelativeDocumentMoniker": "Core\\Interfaces\\IPedidoService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IPedidoService.cs",
-              "RelativeToolTip": "Core\\Interfaces\\IPedidoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABwAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "SyncManager.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\SyncManager.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\SyncManager.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\SyncManager.cs",
+              "RelativeToolTip": "MobileApp\\Services\\SyncManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvyAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T21:37:51.4Z"
+              "WhenOpened": "2025-09-26T22:10:44.12Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Articulos.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Articulos.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\Articulos.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Articulos.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\Articulos.css",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAAABQBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-04T20:16:42.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "NavMenu.razor.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor.css",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Layout\\NavMenu.razor.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor.css",
-              "RelativeToolTip": "MobileApp\\Components\\Layout\\NavMenu.razor.css",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-08T23:29:27.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Login.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Login.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Login.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Login.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Pages\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-25T21:55:54.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "login.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\login.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\login.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\login.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\login.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-14T12:47:39.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\App.xaml",
-              "RelativeDocumentMoniker": "MobileApp\\App.xaml",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\App.xaml",
-              "RelativeToolTip": "MobileApp\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-13T20:09:06.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "AuthState.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\AuthState.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\AuthState.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\AuthState.cs",
-              "RelativeToolTip": "MobileApp\\Services\\AuthState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T20:47:35.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "crear-pedido.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\crear-pedido.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\crear-pedido.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\crear-pedido.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\crear-pedido.css",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwEUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-15T20:00:41.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-05T03:34:33.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAO8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-13T22:39:49.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\index.html",
-              "RelativeToolTip": "MobileApp\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-14T12:49:28.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "bootstrap.min.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-10T00:50:00.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\app.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\app.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-10T00:50:01.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\App.xaml.cs",
               "RelativeDocumentMoniker": "MobileApp\\App.xaml.cs",
               "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\App.xaml.cs",
               "RelativeToolTip": "MobileApp\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwB0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T21:57:49.692Z"
+              "WhenOpened": "2025-10-03T21:57:49.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "MobileApp\\Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MobileApp\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MauiProgram.cs",
+              "RelativeToolTip": "MobileApp\\MauiProgram.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAjwEQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:10:44.753Z"
+              "WhenOpened": "2025-08-12T23:27:46.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MainApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainApplication.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Platforms\\Android\\MainApplication.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainApplication.cs",
-              "RelativeToolTip": "MobileApp\\Platforms\\Android\\MainApplication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "BonificacionApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BonificacionApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\BonificacionApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BonificacionApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\BonificacionApiService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:11:03.471Z"
+              "WhenOpened": "2025-11-12T02:35:41.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AndroidManifest.xml",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeDocumentMoniker": "MobileApp\\Platforms\\Android\\AndroidManifest.xml",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeToolTip": "MobileApp\\Platforms\\Android\\AndroidManifest.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-10-09T22:12:46.497Z"
+              "DocumentIndex": 9,
+              "Title": "BonificacionLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BonificacionLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\BonificacionLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BonificacionLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\BonificacionLocalService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAUwK8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T02:58:06.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "Articulos.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Articulos.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Articulos.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Articulos.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Pages\\Articulos.razor",
+              "ViewState": "AgIAADsBAAAAAAAAAAAYwEYBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-08T23:16:04.894Z"
+              "WhenOpened": "2025-09-03T22:25:05.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 13,
+              "Title": "BocEntApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BocEntApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\BocEntApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BocEntApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\BocEntApiService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T22:38:21.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ConnectivityService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ConnectivityService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\ConnectivityService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ConnectivityService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\ConnectivityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T13:27:23.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PedidoProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\PedidoProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\PedidoProxyService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T21:43:36.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ClientProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\ClientProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\ClientProxyService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAqwHoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:47:43.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAABYAAAAAAAAAAAAlwCkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T03:34:33.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BonificacionProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BonificacionProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\BonificacionProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BonificacionProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\BonificacionProxyService.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T03:46:15.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ArticuloProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\ArticuloProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\ArticuloProxyService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T21:33:29.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IBonificacionService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IBonificacionService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IBonificacionService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IBonificacionService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IBonificacionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T02:26:56.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "PedidoDetalle.razor",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\PedidoDetalle.razor",
               "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\PedidoDetalle.razor",
@@ -682,139 +598,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PedidoDetalle.css",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\PedidoDetalle.css",
-              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\PedidoDetalle.css",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\PedidoDetalle.css",
-              "RelativeToolTip": "MobileApp\\wwwroot\\css\\PedidoDetalle.css",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAmwF4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-03T02:47:30.099Z"
+              "DocumentIndex": 23,
+              "Title": "ClientStateService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientStateService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\ClientStateService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientStateService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\ClientStateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T22:07:08.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CrearPedido.razor",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\CrearPedido.razor",
-              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\CrearPedido.razor",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\CrearPedido.razor",
-              "RelativeToolTip": "MobileApp\\Components\\Pages\\CrearPedido.razor",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwDIAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "Pedidos.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Pedidos.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Pedidos.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Pedidos.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Pages\\Pedidos.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T04:54:55.733Z"
+              "WhenOpened": "2025-09-05T03:33:28.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "DatabaseInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Data\\DatabaseInitializer.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Data\\DatabaseInitializer.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Data\\DatabaseInitializer.cs",
-              "RelativeToolTip": "MobileApp\\Data\\DatabaseInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T21:55:54.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-13T22:39:49.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CartStateService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CartStateService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\CartStateService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CartStateService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\CartStateService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T21:21:36.283Z"
+              "WhenOpened": "2025-09-15T05:01:20.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "MobileApp\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MauiProgram.cs",
-              "RelativeToolTip": "MobileApp\\MauiProgram.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwCQAAABkAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "Articulos.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Articulos.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\Articulos.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Articulos.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\Articulos.css",
+              "ViewState": "AgIAANUAAAAAAAAAAAAowC0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-04T20:16:42.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BocEntProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BocEntProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\BocEntProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BocEntProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\BocEntProxyService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwGUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:27:46.786Z"
+              "WhenOpened": "2025-11-04T22:46:23.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "MobileApp\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MainPage.xaml",
-              "RelativeToolTip": "MobileApp\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-13T20:08:59.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "CrearPedidoLocalService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoLocalService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\CrearPedidoLocalService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoLocalService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\CrearPedidoLocalService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAH4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T23:15:40.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "CrearPedidoSyncService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoSyncService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\CrearPedidoSyncService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoSyncService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\CrearPedidoSyncService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowCAAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T22:11:47.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "CrearPedidoProxyService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoProxyService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\CrearPedidoProxyService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\CrearPedidoProxyService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\CrearPedidoProxyService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCMAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T05:08:42.588Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CrearPedidoApiService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\CrearPedidoApiService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Api\\CrearPedidoApiService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\CrearPedidoApiService.cs",
-              "RelativeToolTip": "Infrastructure\\Api\\CrearPedidoApiService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T04:50:59.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "PedidoDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\PedidoDTOs.cs",
-              "RelativeDocumentMoniker": "Core\\DTOs\\PedidoDTOs.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\PedidoDTOs.cs",
-              "RelativeToolTip": "Core\\DTOs\\PedidoDTOs.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAA9wAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T21:11:24.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 28,
               "Title": "CrearPedidoDTOs.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\CrearPedidoDTOs.cs",
               "RelativeDocumentMoniker": "Core\\DTOs\\CrearPedidoDTOs.cs",
               "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\CrearPedidoDTOs.cs",
               "RelativeToolTip": "Core\\DTOs\\CrearPedidoDTOs.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T04:45:01.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 29,
+              "Title": "PedidoDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\PedidoDTOs.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\PedidoDTOs.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\PedidoDTOs.cs",
+              "RelativeToolTip": "Core\\DTOs\\PedidoDTOs.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T21:11:24.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "CrearPedidoSyncDTO.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\CrearPedidoSyncDTO.cs",
               "RelativeDocumentMoniker": "Core\\DTOs\\CrearPedidoSyncDTO.cs",
@@ -826,127 +718,127 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ICrearPedidoService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\ICrearPedidoService.cs",
-              "RelativeDocumentMoniker": "Core\\Interfaces\\ICrearPedidoService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\ICrearPedidoService.cs",
-              "RelativeToolTip": "Core\\Interfaces\\ICrearPedidoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 31,
+              "Title": "PedidoApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\PedidoApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\PedidoApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\PedidoApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\PedidoApiService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T04:49:31.977Z"
+              "WhenOpened": "2025-09-04T21:39:43.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "UserLocalService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserLocalService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\UserLocalService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserLocalService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\UserLocalService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAuwCsAAABZAAAAAAAAAA==",
+              "DocumentIndex": 32,
+              "Title": "PedidoLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\PedidoLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\PedidoLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\PedidoLocalService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAEcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T22:14:55.623Z"
+              "WhenOpened": "2025-09-26T20:48:46.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "UserApiService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\UserApiService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Api\\UserApiService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\UserApiService.cs",
-              "RelativeToolTip": "Infrastructure\\Api\\UserApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABeAAAAAAAAAA==",
+              "DocumentIndex": 34,
+              "Title": "BonClaDetApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BonClaDetApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\BonClaDetApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BonClaDetApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\BonClaDetApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:14:50.811Z"
+              "WhenOpened": "2025-11-12T02:40:43.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ClientProxyService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientProxyService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\ClientProxyService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientProxyService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\ClientProxyService.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAQwHoAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 35,
+              "Title": "BonArtCliApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BonArtCliApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\BonArtCliApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\BonArtCliApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\BonArtCliApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T20:47:43.866Z"
+              "WhenOpened": "2025-11-12T02:39:20.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ConnectivityService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ConnectivityService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\ConnectivityService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ConnectivityService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\ConnectivityService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 36,
+              "Title": "IBocEntService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IBocEntService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IBocEntService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IBocEntService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IBocEntService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:27:23.039Z"
+              "WhenOpened": "2025-11-04T22:39:10.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ClientApiService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ClientApiService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Api\\ClientApiService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ClientApiService.cs",
-              "RelativeToolTip": "Infrastructure\\Api\\ClientApiService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowBsAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 37,
+              "Title": "BonificacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\BonificacionDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\BonificacionDTO.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\BonificacionDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\BonificacionDTO.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwCsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:14:39.222Z"
+              "WhenOpened": "2025-11-12T02:22:00.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "UserProxyService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserProxyService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\UserProxyService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserProxyService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\UserProxyService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowDQAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 33,
+              "Title": "BocEntLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BocEntLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\BocEntLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\BocEntLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\BocEntLocalService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T20:46:38.983Z"
+              "WhenOpened": "2025-11-04T22:44:47.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "ClientStateService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientStateService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\ClientStateService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientStateService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\ClientStateService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:07:08.037Z"
+              "DocumentIndex": 38,
+              "Title": "crear-pedido.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\crear-pedido.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\crear-pedido.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\crear-pedido.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\crear-pedido.css",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-15T20:00:41.459Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ClientLocalService.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientLocalService.cs",
-              "RelativeDocumentMoniker": "MobileApp\\Services\\ClientLocalService.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientLocalService.cs",
-              "RelativeToolTip": "MobileApp\\Services\\ClientLocalService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 39,
+              "Title": "ArticuloLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\ArticuloLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ArticuloLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\ArticuloLocalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T20:46:00.782Z"
+              "WhenOpened": "2025-09-23T20:02:10.765Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "ArticuloDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\ArticuloDTOs.cs",
-              "RelativeDocumentMoniker": "Core\\DTOs\\ArticuloDTOs.cs",
-              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\ArticuloDTOs.cs",
-              "RelativeToolTip": "Core\\DTOs\\ArticuloDTOs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 41,
+              "Title": "BocaEntregaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\BocaEntregaDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\BocaEntregaDTO.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\BocaEntregaDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\BocaEntregaDTO.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T21:35:46.059Z"
+              "WhenOpened": "2025-10-20T23:17:01.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 42,
               "Title": "ClientDTOs.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\ClientDTOs.cs",
               "RelativeDocumentMoniker": "Core\\DTOs\\ClientDTOs.cs",
@@ -958,19 +850,331 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ArticuloDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\ArticuloDTOs.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\ArticuloDTOs.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\ArticuloDTOs.cs",
+              "RelativeToolTip": "Core\\DTOs\\ArticuloDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T21:35:46.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ArticuloApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ArticuloApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\ArticuloApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ArticuloApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\ArticuloApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T21:31:36.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MobileApp\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\MainPage.xaml",
+              "RelativeToolTip": "MobileApp\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-13T20:08:59.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "NetworkService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\NetworkService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\NetworkService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\NetworkService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\NetworkService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAkwDMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T23:58:14.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "DatabaseInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Data\\DatabaseInitializer.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Data\\DatabaseInitializer.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Data\\DatabaseInitializer.cs",
+              "RelativeToolTip": "MobileApp\\Data\\DatabaseInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T21:21:36.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Pedidos.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Pedidos.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\Pedidos.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\Pedidos.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\Pedidos.css",
+              "ViewState": "AgIAAHIAAAAAAAAAAIBJwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-05T12:23:16.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IArticuloService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IArticuloService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IArticuloService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IArticuloService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IArticuloService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T21:34:14.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IPedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IPedidoService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IPedidoService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IPedidoService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IPedidoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T21:37:51.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "MobileApp\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAEAAAAAAAAAAAIBJwEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-08T23:29:27.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-14T12:47:39.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\App.xaml",
+              "RelativeDocumentMoniker": "MobileApp\\App.xaml",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\App.xaml",
+              "RelativeToolTip": "MobileApp\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-13T20:09:06.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "AuthState.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\AuthState.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\AuthState.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\AuthState.cs",
+              "RelativeToolTip": "MobileApp\\Services\\AuthState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T20:47:35.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\index.html",
+              "RelativeToolTip": "MobileApp\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-14T12:49:28.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-10T00:50:00.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-10T00:50:01.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "MobileApp\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T22:10:44.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "MainApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainApplication.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Platforms\\Android\\MainApplication.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\MainApplication.cs",
+              "RelativeToolTip": "MobileApp\\Platforms\\Android\\MainApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T22:11:03.471Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 55,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "MobileApp\\Platforms\\Android\\AndroidManifest.xml",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeToolTip": "MobileApp\\Platforms\\Android\\AndroidManifest.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-10-09T22:12:46.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "MobileApp\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "MobileApp\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-08T23:16:04.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "PedidoDetalle.css",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\PedidoDetalle.css",
+              "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\PedidoDetalle.css",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\PedidoDetalle.css",
+              "RelativeToolTip": "MobileApp\\wwwroot\\css\\PedidoDetalle.css",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAmwF4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-03T02:47:30.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ICrearPedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\ICrearPedidoService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\ICrearPedidoService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\ICrearPedidoService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\ICrearPedidoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T04:49:31.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "UserLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\UserLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\UserLocalService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAuwCsAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T22:14:55.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "UserApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\UserApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\UserApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\UserApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\UserApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T23:14:50.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ClientApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ClientApiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Api\\ClientApiService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Infrastructure\\Api\\ClientApiService.cs",
+              "RelativeToolTip": "Infrastructure\\Api\\ClientApiService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowBsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T23:14:39.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "UserProxyService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserProxyService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\UserProxyService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\UserProxyService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\UserProxyService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:46:38.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ClientLocalService.cs",
+              "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientLocalService.cs",
+              "RelativeDocumentMoniker": "MobileApp\\Services\\ClientLocalService.cs",
+              "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Services\\ClientLocalService.cs",
+              "RelativeToolTip": "MobileApp\\Services\\ClientLocalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T20:46:00.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
               "Title": "dashboard.css",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\dashboard.css",
               "RelativeDocumentMoniker": "MobileApp\\wwwroot\\css\\dashboard.css",
               "ToolTip": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\css\\dashboard.css",
               "RelativeToolTip": "MobileApp\\wwwroot\\css\\dashboard.css",
-              "ViewState": "AgIAABcBAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQBAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-08-14T15:04:34.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 70,
               "Title": "UserDTOs.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\DTOs\\UserDTOs.cs",
               "RelativeDocumentMoniker": "Core\\DTOs\\UserDTOs.cs",
@@ -982,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 71,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Models\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Core\\Models\\Entities\\User.cs",
@@ -994,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 72,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Models\\Entities\\Client.cs",
               "RelativeDocumentMoniker": "Core\\Models\\Entities\\Client.cs",
@@ -1006,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 69,
               "Title": "IClientService.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IClientService.cs",
               "RelativeDocumentMoniker": "Core\\Interfaces\\IClientService.cs",
@@ -1018,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 73,
               "Title": "Factura.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Models\\Entities\\Factura.cs",
               "RelativeDocumentMoniker": "Core\\Models\\Entities\\Factura.cs",
@@ -1030,7 +1234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 74,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Core\\Interfaces\\IUserService.cs",
@@ -1042,7 +1246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 75,
               "Title": "BottomNav.razor",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\BottomNav.razor",
               "RelativeDocumentMoniker": "MobileApp\\Components\\BottomNav.razor",
@@ -1054,7 +1258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 76,
               "Title": "LogoCL.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [568x78, 32 bits, PNG]",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\wwwroot\\images\\LogoCL.png",
               "RelativeDocumentMoniker": "MobileApp\\wwwroot\\images\\LogoCL.png",
@@ -1066,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 78,
               "Title": "RedirectToLogin.razor",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\RedirectToLogin.razor",
               "RelativeDocumentMoniker": "MobileApp\\Components\\RedirectToLogin.razor",
@@ -1078,7 +1282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 77,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\MobileApp\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "MobileApp\\Components\\Routes.razor",
@@ -1090,7 +1294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 79,
               "Title": "IConnectivityService.cs",
               "DocumentMoniker": "C:\\Users\\Agustin\\source\\repos\\CaferLitoral-CRM-Frontend\\Core\\Interfaces\\IConnectivityService.cs",
               "RelativeDocumentMoniker": "Core\\Interfaces\\IConnectivityService.cs",
@@ -1103,7 +1307,7 @@
           ]
         },
         {
-          "DockedHeight": 188,
+          "DockedHeight": 544,
           "SelectedChildIndex": -1,
           "Children": [
             {

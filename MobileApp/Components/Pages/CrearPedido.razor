@@ -1,4 +1,5 @@
-﻿@page "/crear-pedido"
+﻿
+@page "/crear-pedido"
 @using Core.DTOs
 @using Core.Interfaces
 @using Infrastructure.Api
@@ -6,6 +7,337 @@
 @inject CartStateService CartState
 @inject ICrearPedidoService PedidoService
 @inject ClientStateService ClientState
+@inject IBocEntService BocEntService
+@inject IBonificacionService BonificacionService
+
+<div class="crear-pedido-wrap">
+    <h2 class="pedido-title">Nuevo Pedido para @ClientState.SelectedClient?.NomCli</h2>
+
+    @if (CartState.Items.Count == 0)
+    {
+        <div class="card empty-card">
+            <p>No hay artículos seleccionados.</p>
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="table-scroll">
+                <table class="pedido-detalle">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Artículo</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unit.</th>
+                            <th>Bonif.</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in CartState.Items)
+                        {
+                            var porcentaje = ObtenerPorcentajeBonificacion(item.CodArt);
+                            var subtotalSinDesc = item.Cantidad * item.PrecioUnitario;
+                            var descuento = subtotalSinDesc * (porcentaje / 100);
+                            var subtotalConDesc = subtotalSinDesc - descuento;
+
+                            <tr>
+                                <td>@item.CodArt</td>
+                                <td>@item.DesArt</td>
+                                <td>@item.Cantidad</td>
+                                <td class="precio-col">@item.PrecioUnitario.ToString("C")</td>
+                                <td class="bonif-col">
+                                    @if (porcentaje > 0)
+                                    {
+                                        <span class="bonif-badge">@porcentaje%</span>
+                                    }
+                                    else
+                                    {
+                                        <span>-</span>
+                                    }
+                                </td>
+                                <td class="subtotal-col">
+                                    @if (porcentaje > 0)
+                                    {
+                                        <div>
+                                            <span class="precio-tachado">@subtotalSinDesc.ToString("C")</span>
+                                            <span class="precio-final">@subtotalConDesc.ToString("C")</span>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <span>@subtotalConDesc.ToString("C")</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="pedido-total-label">
+                                <div>
+                                    <div>Subtotal sin descuentos:</div>
+                                    @if (totalDescuentos > 0)
+                                    {
+                                        <div class="descuento-aplicado">Descuentos aplicados:</div>
+                                    }
+                                    <div class="total-final-label">TOTAL:</div>
+                                </div>
+                            </td>
+                            <td class="pedido-total-value">
+                                <div>
+                                    <div class="precio-tachado">@totalSinDescuentos.ToString("C")</div>
+                                    @if (totalDescuentos > 0)
+                                    {
+                                        <div class="descuento-valor">-@totalDescuentos.ToString("C")</div>
+                                    }
+                                    <div class="total-final-valor">@totalConDescuentos.ToString("C")</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!-- 🔘 Toggle de Confirmado -->
+        <div class="toggle-container">
+            <label class="toggle-label">Pedido Confirmado:</label>
+            <button class="toggle-button @(Confirmado == 1 ? "on" : "off")"
+                    @onclick="ToggleConfirmado">
+                @(Confirmado == 1 ? "Sí" : "No")
+            </button>
+        </div>
+
+        <!-- 🏢 Selector de Boca de Entrega -->
+        <div class="boca-entrega-container">
+            <label class="boca-label">Boca de Entrega:</label>
+
+            @if (cargandoBocas)
+            {
+                <p class="loading-text">Cargando bocas de entrega...</p>
+            }
+            else if (bocasDisponibles == null || !bocasDisponibles.Any())
+            {
+                <p class="no-bocas-text">No hay bocas de entrega disponibles para este cliente.</p>
+            }
+            else
+            {
+                <div class="boca-select" @onclick="ToggleDropdown">
+                    <div class="boca-select-text">
+                        @if (bocaSeleccionada != null)
+                        {
+                            @bocaSeleccionada.NomBocEnt @:- @bocaSeleccionada.DomBocEnt
+                        }
+                        else
+                        {
+                            <text>Seleccionar boca de entrega...</text>
+                        }
+                    </div>
+                    <span class="boca-select-arrow">▼</span>
+                </div>
+
+                @if (mostrarDropdown)
+                {
+                    <div class="boca-dropdown">
+                        @foreach (var boca in bocasDisponibles)
+                        {
+                            <div class="boca-item @(bocaSeleccionada?.NroBocEnt == boca.NroBocEnt ? "selected" : "")"
+                                 @onclick="() => SeleccionarBoca(boca)">
+                                <div class="boca-nombre">@boca.NomBocEnt</div>
+                                <div class="boca-domicilio">@boca.DomBocEnt</div>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+
+        <button class="btn-primary full" @onclick="ConfirmarPedido" disabled="@(!PuedeConfirmar())">
+            Confirmar Pedido
+        </button>
+
+        @if (errorBoca)
+        {
+            <div class="error-message">Debe seleccionar una boca de entrega antes de confirmar.</div>
+        }
+    }
+</div>
+
+@code {
+    private List<CrearPedidoDetalleDTO> carrito = new();
+    private int Confirmado = 0;
+
+    // 🏢 Variables para bocas de entrega
+    private List<BocaEntregaDTO> bocasDisponibles = new();
+    private BocaEntregaDTO? bocaSeleccionada = null;
+    private bool mostrarDropdown = false;
+    private bool cargandoBocas = false;
+    private bool errorBoca = false;
+
+    // 🔥 NUEVO: Variables para bonificaciones
+    private Dictionary<string, decimal> Bonificaciones = new();
+    private decimal totalSinDescuentos = 0;
+    private decimal totalDescuentos = 0;
+    private decimal totalConDescuentos = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        carrito = CartState.Items.ToList();
+        await CargarBocasDeEntrega();
+        await CargarBonificacionesYCalcularTotales();
+    }
+
+    // 🔥 NUEVO: Cargar bonificaciones y calcular totales
+    private async Task CargarBonificacionesYCalcularTotales()
+    {
+        if (ClientState.SelectedClient == null)
+            return;
+
+        try
+        {
+            totalSinDescuentos = 0;
+            totalDescuentos = 0;
+
+            foreach (var item in CartState.Items)
+            {
+                var porcentaje = await BonificacionService.ObtenerPorcentajeBonificacionAsync(
+                    ClientState.SelectedClient.CodCli,
+                    item.CodArt,
+                    item.Cantidad,
+                    item.PrecioUnitario
+                );
+
+                Bonificaciones[item.CodArt] = porcentaje;
+
+                var subtotal = item.Cantidad * item.PrecioUnitario;
+                totalSinDescuentos += subtotal;
+
+                if (porcentaje > 0)
+                {
+                    var descuento = subtotal * (porcentaje / 100);
+                    totalDescuentos += descuento;
+                }
+            }
+
+            totalConDescuentos = totalSinDescuentos - totalDescuentos;
+
+            System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Sin desc: {totalSinDescuentos}, Desc: {totalDescuentos}, Total: {totalConDescuentos}");
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Error calculando totales: {ex.Message}");
+        }
+    }
+
+    // 🔥 NUEVO: Obtener porcentaje de bonificación
+    private decimal ObtenerPorcentajeBonificacion(string codArt)
+    {
+        return Bonificaciones.TryGetValue(codArt, out var porcentaje) ? porcentaje : 0;
+    }
+
+    private async Task CargarBocasDeEntrega()
+    {
+        if (ClientState.SelectedClient == null)
+            return;
+
+        try
+        {
+            cargandoBocas = true;
+            var bocas = await BocEntService.GetByCliente(ClientState.SelectedClient.CodCli);
+            bocasDisponibles = bocas.ToList();
+
+            System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Bocas cargadas: {bocasDisponibles.Count}");
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Error cargando bocas: {ex.Message}");
+            bocasDisponibles = new List<BocaEntregaDTO>();
+        }
+        finally
+        {
+            cargandoBocas = false;
+        }
+    }
+
+    private void ToggleDropdown()
+    {
+        mostrarDropdown = !mostrarDropdown;
+    }
+
+    private void SeleccionarBoca(BocaEntregaDTO boca)
+    {
+        bocaSeleccionada = boca;
+        mostrarDropdown = false;
+        errorBoca = false;
+
+        System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Boca seleccionada: {boca.NroBocEnt} - {boca.NomBocEnt}");
+    }
+
+    private void ToggleConfirmado()
+    {
+        Confirmado = Confirmado == 1 ? 0 : 1;
+    }
+
+    private bool PuedeConfirmar()
+    {
+        return bocaSeleccionada != null;
+    }
+
+    private async Task ConfirmarPedido()
+    {
+        if (ClientState.SelectedClient == null || carrito.Count == 0)
+            return;
+
+        if (bocaSeleccionada == null)
+        {
+            errorBoca = true;
+            System.Diagnostics.Debug.WriteLine("[CREAR PEDIDO] ❌ No se seleccionó boca de entrega");
+            return;
+        }
+
+        var pedido = new CrearPedidoDTO
+        {
+            CodTipCbt = 96,
+            CemCbt = 1,
+            NroCbt = 0,
+            CodCli = ClientState.SelectedClient.CodCli,
+            NroBocEnt = bocaSeleccionada.NroBocEnt,
+            Detalles = carrito,
+            Confirmado = Confirmado
+        };
+
+        System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Creando pedido con boca {pedido.NroBocEnt}");
+
+        var ok = await PedidoService.CrearPedidoAsync(pedido);
+
+        if (ok)
+        {
+            CartState.Clear();
+            System.Diagnostics.Debug.WriteLine("[CREAR PEDIDO] ✅ Pedido creado con éxito");
+        }
+        else
+        {
+            System.Diagnostics.Debug.WriteLine("[CREAR PEDIDO] ❌ Error al crear el pedido");
+        }
+    }
+}
+
+
+
+
+
+
+@* @page "/crear-pedido"
+@using Core.DTOs
+@using Core.Interfaces
+@using Infrastructure.Api
+@using MobileApp.Services
+@inject CartStateService CartState
+@inject ICrearPedidoService PedidoService
+@inject ClientStateService ClientState
+@inject IBocEntService BocEntService
 
 <div class="crear-pedido-wrap">
     <h2 class="pedido-title">Nuevo Pedido para @ClientState.SelectedClient?.NomCli</h2>
@@ -50,19 +382,134 @@
             </div>
         </div>
 
+        <!-- 🔘 Toggle de Confirmado -->
+        <div class="toggle-container">
+            <label class="toggle-label">Pedido Confirmado:</label>
+            <button class="toggle-button @(Confirmado == 1 ? "on" : "off")"
+                    @onclick="ToggleConfirmado">
+                @(Confirmado == 1 ? "Sí" : "No")
+            </button>
+        </div>
 
-        <button class="btn-primary full" @onclick="ConfirmarPedido">
+        <!-- 🏢 Selector de Boca de Entrega -->
+        <div class="boca-entrega-container">
+            <label class="boca-label">Boca de Entrega:</label>
+
+            @if (cargandoBocas)
+            {
+                <p class="loading-text">Cargando bocas de entrega...</p>
+            }
+            else if (bocasDisponibles == null || !bocasDisponibles.Any())
+            {
+                <p class="no-bocas-text">No hay bocas de entrega disponibles para este cliente.</p>
+            }
+            else
+            {
+                <!-- Botón que simula un select -->
+                <div class="boca-select" @onclick="ToggleDropdown">
+                    <div class="boca-select-text">
+                        @if (bocaSeleccionada != null)
+                        {
+                            @bocaSeleccionada.NomBocEnt @:- @bocaSeleccionada.DomBocEnt
+                        }
+                        else
+                        {
+                            <text>Seleccionar boca de entrega...</text>
+                        }
+                    </div>
+                    <span class="boca-select-arrow">▼</span>
+                </div>
+
+                @if (mostrarDropdown)
+                {
+                    <div class="boca-dropdown">
+                        @foreach (var boca in bocasDisponibles)
+                        {
+                            <div class="boca-item @(bocaSeleccionada?.NroBocEnt == boca.NroBocEnt ? "selected" : "")"
+                                 @onclick="() => SeleccionarBoca(boca)">
+                                <div class="boca-nombre">@boca.NomBocEnt</div>
+                                <div class="boca-domicilio">@boca.DomBocEnt</div>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+
+        <button class="btn-primary full" @onclick="ConfirmarPedido" disabled="@(!PuedeConfirmar())">
             Confirmar Pedido
         </button>
+
+        @if (errorBoca)
+        {
+            <div class="error-message">Debe seleccionar una boca de entrega antes de confirmar.</div>
+        }
     }
 </div>
 
 @code {
     private List<CrearPedidoDetalleDTO> carrito = new();
+    private int Confirmado = 0;
 
-    protected override void OnInitialized()
+    // 🏢 Variables para bocas de entrega
+    private List<BocaEntregaDTO> bocasDisponibles = new();
+    private BocaEntregaDTO? bocaSeleccionada = null;
+    private bool mostrarDropdown = false;
+    private bool cargandoBocas = false;
+    private bool errorBoca = false;
+
+    protected override async Task OnInitializedAsync()
     {
         carrito = CartState.Items.ToList();
+        await CargarBocasDeEntrega();
+    }
+
+    private async Task CargarBocasDeEntrega()
+    {
+        if (ClientState.SelectedClient == null)
+            return;
+
+        try
+        {
+            cargandoBocas = true;
+            var bocas = await BocEntService.GetByCliente(ClientState.SelectedClient.CodCli);
+            bocasDisponibles = bocas.ToList();
+
+            System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Bocas cargadas: {bocasDisponibles.Count}");
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Error cargando bocas: {ex.Message}");
+            bocasDisponibles = new List<BocaEntregaDTO>();
+        }
+        finally
+        {
+            cargandoBocas = false;
+        }
+    }
+
+    private void ToggleDropdown()
+    {
+        mostrarDropdown = !mostrarDropdown;
+    }
+
+    private void SeleccionarBoca(BocaEntregaDTO boca)
+    {
+        bocaSeleccionada = boca;
+        mostrarDropdown = false;
+        errorBoca = false;
+
+        System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Boca seleccionada: {boca.NroBocEnt} - {boca.NomBocEnt}");
+    }
+
+    private void ToggleConfirmado()
+    {
+        Confirmado = Confirmado == 1 ? 0 : 1;
+    }
+
+    private bool PuedeConfirmar()
+    {
+        return bocaSeleccionada != null;
     }
 
     private async Task ConfirmarPedido()
@@ -70,27 +517,36 @@
         if (ClientState.SelectedClient == null || carrito.Count == 0)
             return;
 
+        if (bocaSeleccionada == null)
+        {
+            errorBoca = true;
+            System.Diagnostics.Debug.WriteLine("[CREAR PEDIDO] ❌ No se seleccionó boca de entrega");
+            return;
+        }
+
         var pedido = new CrearPedidoDTO
         {
             CodTipCbt = 96,
             CemCbt = 1,
             NroCbt = 0,
             CodCli = ClientState.SelectedClient.CodCli,
-            Detalles = carrito
+            NroBocEnt = bocaSeleccionada.NroBocEnt,
+            Detalles = carrito,
+            Confirmado = Confirmado
         };
+
+        System.Diagnostics.Debug.WriteLine($"[CREAR PEDIDO] Creando pedido con boca {pedido.NroBocEnt}");
 
         var ok = await PedidoService.CrearPedidoAsync(pedido);
 
         if (ok)
         {
             CartState.Clear();
-            Console.WriteLine("Pedido creado con éxito");
+            System.Diagnostics.Debug.WriteLine("[CREAR PEDIDO] ✅ Pedido creado con éxito");
         }
         else
         {
-            Console.WriteLine("Error al crear el pedido");
+            System.Diagnostics.Debug.WriteLine("[CREAR PEDIDO] ❌ Error al crear el pedido");
         }
     }
-}
-
-
+} *@
